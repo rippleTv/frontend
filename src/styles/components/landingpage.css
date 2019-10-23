@@ -1,3 +1,108 @@
+
 .landing-page {
-	background: #4d4a4a;
+	margin:0;
+	padding:0;
+	overflow-x:hidden;
+}
+
+
+.landing-page .ticker img{
+	height: 99.2vh;
+	width: auto;
+}
+
+.landing--wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 200px;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(180deg, #1A1919 15.43%, rgba(55, 55, 55, 0) 100%), #3F3F3F;
+	/* mix-blend-mode: multiply; */
+	opacity: .9;	
+}
+
+.landing--header{
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	padding: 0px 50px;
+	margin-top: 50px;
+}
+.landing--login{
+	font-family:  'Roboto', sans-serif;
+	height: 40px;
+	width: 112px;
+	padding: 5px;
+	color: white;
+	background: linear-gradient(180deg, #1A1919 15.43%, rgba(55, 55, 55, 0) 100%), #3F3F3F;
+	border: 2px solid #F9B109;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+.landing--body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 150px;
+	color: white;
+}
+.landing--body>h1{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 60px;
+	line-height: 70px;
+	text-align: center;
+	color: #FFFFFF;
+}
+.landing--body>p{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 28px;
+	text-align: center;
+	color: #FFFFFF;
+	margin: 10px 0px;
+}
+.landing--body>button{
+	width: 254px;
+	height: 50px;
+	background: #F9B109;
+	border-radius: 10px;
+	border: none;
+	font-family: Roboto;
+	color: white;
+	margin-top: 10px;
+	opacity:1;
+}
+.landing--footer{
+	margin-top: 110px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 30px;
+}
+.footer--icons{
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+.footer--icons>i{
+	font-size: 21px;
+	font-weight: 400;
+}
+.fa-play-circle,.fa-pause-circle{
+	color: #F9B109;
+	font-size: 40px;
+	font-weight: 400;
+}
+.fa-facebook{
+	padding: 10px 0px;
+}
+button:hover, .fab:hover,.far:hover{
+	cursor: pointer;
+	
 }

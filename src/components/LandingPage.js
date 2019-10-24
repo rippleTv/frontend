@@ -7,19 +7,20 @@ import ripple from '../img/Ripple-Logo.png'
 class LandingPage extends Component {
 	state = { 
 		move: true,
-		btn: "pause"
+		sliderAnim: "pause"
 	 }
 	handleClick = ()=>{
-		let move= this.state.move;
+		const { move: moving, sliderAnim } = this.state;
+		let anim;
+		let move= moving;
 		move = !move;
-		let btn;
-		if(this.state.btn === "play"){
-			btn="pause"
+		if(sliderAnim === "play"){
+			anim="pause"
 		}
-		if(this.state.btn === "pause"){
-			btn="play"
+		if(sliderAnim === "pause"){
+			anim="play"
 		}
-		this.setState({ move, btn })
+		this.setState({ move, sliderAnim: anim })
 	}
 
 	
@@ -28,11 +29,10 @@ class LandingPage extends Component {
 			<div className="landing-page">
 				<Ticker  speed={5} mode='chain' move={ this.state.move}>
 					{({ index }) => (
-					<>
-						
-						<img src={slider} alt="" style={{margin:0, padding:0}}/>
-					</>
-						)}
+						<>
+							<img src={slider} alt="slider" width="1152px" height="662px" style={{margin:0, padding:0}}/>
+						</>
+					)}
 				</Ticker>
 
 				<div className="landing--wrapper">
@@ -42,7 +42,7 @@ class LandingPage extends Component {
 						</div>
 
 						<div className="landing--body">
-							<h1>The best of Nollywood</h1>
+							<h1>The Best Of Nollywood</h1>
 							<p>Thousands of movies. Watch on any device</p>
 							<button>START WATCHING</button>
 						</div>
@@ -53,10 +53,9 @@ class LandingPage extends Component {
 								<i className="fab fa-facebook"></i>
 								<i className="fab fa-twitter"></i>
 							</div>
-								<i className={`far fa-${this.state.btn}-circle`} onClick={this.handleClick}></i>
+								<i className={`far fa-${this.state.sliderAnim}-circle`} onClick={this.handleClick}></i>
 								
 						</div>
-				
 				</div>	
 			</div>
 		 );

@@ -1,17 +1,21 @@
-
+/* --------------------------------------------------LANDING-PAGE-STYLES --------------------------------------------------*/
 .landing-page {
 	margin:0;
 	padding:0;
 	overflow-x:hidden;
+	
 }
 
 
-.landing-page .ticker img{
+/* .landing-page .ticker img{
 	height: 99.2vh;
 	width: auto;
-}
-
+} */
+/* ---------------------------------------------------LANDING-WRAPPER-STYLES --------------------------------------------*/
 .landing--wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -23,12 +27,13 @@
 	opacity: .9;	
 }
 
+/*----------------------------------------------------LANDING-HEADER-STYLES ---------------------------------------------------------*/
 .landing--header{
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	justify-content: space-between;
 	padding: 0px 50px;
-	margin-top: 50px;
+	/* margin-top: 50px; */
 }
 .landing--login{
 	font-family:  'Roboto', sans-serif;
@@ -41,12 +46,13 @@
 	box-sizing: border-box;
 	border-radius: 10px;
 }
+/* ---------------------------------------------------LANDING-BODY-STYLES------------------------------------------------- */
 .landing--body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	margin-top: 150px;
+	/* margin-top: 150px; */
 	color: white;
 }
 .landing--body>h1{
@@ -79,11 +85,12 @@
 	margin-top: 10px;
 	opacity:1;
 }
+/* ---------------------------------------------------LANDING-FOOTER-STYLES------------------------------------------------ */
 .landing--footer{
-	margin-top: 110px;
+	/* margin-top: 110px; */
 	display: flex;
 	justify-content: space-between;
-	padding: 0px 30px;
+	padding: 0px 60px;
 }
 .footer--icons{
 	display: flex;
@@ -102,7 +109,52 @@
 .fa-facebook{
 	padding: 10px 0px;
 }
+/* -------------------------------------------------------ALL-HOVER-EFFECT-------------------------------------------------------- */
 button:hover, .fab:hover,.far:hover{
 	cursor: pointer;
+	
+}
+/* -------------------------------------------------------ALL-MEDIA-QUERIES--------------------------------------------------------- */
+
+@media only screen and (min-height: 600px){
+	.ticker img{
+		height: 99.2vh;
+	}
+}
+@media only screen and (max-width: 670px){
+	.landing--body>h1{
+		font-size: 35px;
+	}
+	.landing--body>p{
+		font-size: 15px;
+	}
+	.landing--body>button{
+		width: 150px;
+	}
+}
+@media only screen and (max-width: 390px){
+	.landing--header>img{
+		width: 80px;
+		height: 20px;
+	}
+	.landing--header>button{
+		width: 80px;
+		height: 30px;
+	}
+	.landing--body>h1{
+		font-size: 25px;
+		padding: 1px;
+	}
+	.landing--body>p{
+		font-size: 9px;
+		padding: 0px;
+		margin: 0px;
+	}
+	.landing--body>button{
+		width: 120px;
+		height: 30px;
+		font-size: 10px;
+		border-radius: 2px;
+	}
 	
 }

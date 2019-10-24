@@ -1,9 +1,15 @@
+.container {
+	width: 80%;
+	margin: auto;
+}
+
 /* Base
 ========================================================================== */
 @import 'base/normalize.css';
+@import 'base/vars.css';
 
 /* Components 
 ========================================================================== */
 @import 'components/landingpage.css';
 @import 'components/login.css';
-@import 'components/landingpage.css';
+@import 'components/signup.css';

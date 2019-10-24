@@ -1,0 +1,10 @@
+:root {
+	--bg-gradient: linear-gradient(
+			180deg,
+			#1a1919 15.43%,
+			rgba(55, 55, 55, 0) 100%
+		),
+		#3f3f3f;
+	--bg-opacity: 0.9;
+	--yellow: #f9b109;
+}

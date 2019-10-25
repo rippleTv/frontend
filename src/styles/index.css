@@ -1,5 +1,8 @@
+html{
+  font-size: 62.5%;
+}
 /* Components 
 ========================================================================== */
 @import 'components/landingpage.css';
 @import 'components/login.css';
-@import 'components/landingpage.css';
+@import 'components/signup.css';

@@ -1,3 +1,12 @@
+
+body{
+	font-family: Roboto, Helvetica, sans-serif;
+}
+.container {
+	width: 80%;
+	margin: auto;
+}
+
 /* Base
 ========================================================================== */
 @import 'base/normalize.css';
@@ -7,4 +16,4 @@
 ========================================================================== */
 @import 'components/landingpage.css';
 @import 'components/login.css';
-@import 'components/landingpage.css';
+@import 'components/signup.css';

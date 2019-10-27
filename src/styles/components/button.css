@@ -1,0 +1,18 @@
+.yellow--button{
+    background: var(--yellow);
+	border-radius: 10px;
+    border: none;
+    font-family: Roboto;
+	color: white;
+}
+.transparent--button{
+    font-family: 'Roboto', sans-serif;
+	padding: 5px;
+	color: white;
+	background: linear-gradient(180deg, #1a1919 15.43%, rgba(55, 55, 55, 0) 100%),
+		#3f3f3f;
+	border: 2px solid var(--yellow);
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+    

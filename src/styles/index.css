@@ -1,10 +1,15 @@
-
+html{
+	font-size: 62.5%;
+}
 body{
 	font-family: Roboto, Helvetica, sans-serif;
 }
 .container {
 	width: 80%;
 	margin: auto;
+}
+.clickable{
+    cursor: pointer;
 }
 
 /* Base
@@ -17,3 +22,6 @@ body{
 @import 'components/landingpage.css';
 @import 'components/login.css';
 @import 'components/signup.css';
+@import  'components/button.css';
+@import  'components/navbar.css';
+@import  'components/dropdown.css';

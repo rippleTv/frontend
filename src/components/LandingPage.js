@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Ticker from 'react-ticker' 
 import slider from '../img/sliderimage.png'
 import ripple from '../img/Ripple-Logo.png'
-import { Link } from 'react-router-dom';
 import * as ROUTES from '../routes';
+
 
 
 class LandingPage extends Component {
@@ -56,7 +56,7 @@ class LandingPage extends Component {
 							<p>Thousands of movies. Watch on any device</p>
 							<button onClick={this.handleSignUp}>START WATCHING</button>
 						</div>
-
+						
 						<div className="landing--footer">
 							<div className="footer--icons">
 								<i className="fab fa-instagram"></i>

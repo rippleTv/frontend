@@ -18,7 +18,7 @@ function Signup() {
 					</div>
 					<form action="" className="signup--form">
 						<div class="signup--google">
-							<img src={googleIcon} width="19" height="19"></img>
+							<img src={googleIcon} width="19" height="19" alt="google"></img>
 							<p>SIGN UP WITH GOOGLE</p>
 						</div>
 						<div className="signup-divider">

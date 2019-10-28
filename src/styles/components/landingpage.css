@@ -41,7 +41,7 @@
 	color: white;
 	background: linear-gradient(180deg, #1a1919 15.43%, rgba(55, 55, 55, 0) 100%),
 		#3f3f3f;
-	border: 2px solid #f9b109;
+	border: 2px solid var(--yellow);
 	box-sizing: border-box;
 	border-radius: 10px;
 }
@@ -76,7 +76,7 @@
 .landing--body > button {
 	width: 254px;
 	height: 50px;
-	background: #f9b109;
+	background: var(--yellow);
 	border-radius: 10px;
 	border: none;
 	font-family: Roboto;
@@ -102,7 +102,7 @@
 }
 .fa-play-circle,
 .fa-pause-circle {
-	color: #f9b109;
+	color: var(--yellow);
 	font-size: 40px;
 	font-weight: 400;
 }

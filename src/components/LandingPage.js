@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Ticker from 'react-ticker' 
 import slider from '../img/sliderimage.png'
 import ripple from '../img/Ripple-Logo.png'
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../routes';
 
 
 class LandingPage extends Component {
@@ -23,6 +25,14 @@ class LandingPage extends Component {
 		this.setState({ move, sliderAnim: anim })
 	}
 
+	handleSignUp = () => {
+		this.props.history.push(ROUTES.SIGN_UP);
+	}
+
+	handleSignIn = () => {
+		this.props.history.push(ROUTES.SIGN_IN);
+	}
+
 	
 	render() { 
 		return ( 
@@ -38,13 +48,13 @@ class LandingPage extends Component {
 				<div className="landing--wrapper">
 						<div className="landing--header">
 							<img src={ripple} width="135" height="36" alt=""/>
-							<button className="landing--login">LOG IN</button>
+							<button className="landing--login" onClick={this.handleSignIn}>LOG IN</button>
 						</div>
 
 						<div className="landing--body">
 							<h1>The Best Of Nollywood</h1>
 							<p>Thousands of movies. Watch on any device</p>
-							<button>START WATCHING</button>
+							<button onClick={this.handleSignUp}>START WATCHING</button>
 						</div>
 
 						<div className="landing--footer">

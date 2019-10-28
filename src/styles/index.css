@@ -1,9 +1,8 @@
-body {
-	font-family: Roboto, Helvetica, sans-serif;
-}
-
 html {
 	font-size: 62.5%;
+}
+body {
+	font-family: Roboto, Helvetica, sans-serif;
 }
 
 .container {
@@ -37,6 +36,9 @@ html {
 		max-width: 1140px;
 	}
 }
+.clickable {
+	cursor: pointer;
+}
 
 /* Base
 ========================================================================== */
@@ -48,3 +50,6 @@ html {
 @import 'components/landingpage.css';
 @import 'components/login.css';
 @import 'components/signup.css';
+@import 'components/button.css';
+@import 'components/navbar.css';
+@import 'components/dropdown.css';

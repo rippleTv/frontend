@@ -1,0 +1,19 @@
+.dropdown{
+    position: absolute;
+    z-index: 100;
+    margin-left: 1.8rem;
+    padding: 5px;
+    text-align: center;
+    margin-top: .1px;
+    background: #3F3F3F;
+    border-radius: 0px 0px 5px 5px;
+    width: 6rem;
+    color: white;
+   font-size: .8rem;
+}
+.drop--items{
+    padding: 5px ;
+}
+.drop--items:hover{
+    color: var(--yellow);
+}

@@ -1,7 +1,11 @@
-
-body{
+body {
 	font-family: Roboto, Helvetica, sans-serif;
 }
+
+html {
+	font-size: 62.5%;
+}
+
 .container {
 	width: 100%;
 	padding-right: 15px;
@@ -33,6 +37,7 @@ body{
 		max-width: 1140px;
 	}
 }
+
 /* Base
 ========================================================================== */
 @import 'base/normalize.css';

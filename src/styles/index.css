@@ -57,3 +57,6 @@ button:focus{
 @import  'components/navbar.css';
 @import  'components/dropdown.css';
 @import  'components/payment.css';
+@import  'components/homepage.css';
+@import  'components/imageCard.css';
+@import  'components/imageSlider.css';

@@ -4,3 +4,5 @@ export const SIGN_IN = '/signin';
 export const PAYMENT = '/payment';
 export const HOMEPAGE = '/home';
 export const SUBSCRIPTION = '/subscription';
+export const MOVIES ='/movies'
+

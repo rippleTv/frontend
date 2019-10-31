@@ -1,0 +1,54 @@
+.card{
+    width: 20.7rem;
+    height: 34.8rem;
+    border-radius: 10px;
+    position: relative;
+}
+.onHover--card{
+    bottom: 12%;
+    position: absolute;
+    height: 6.5rem;
+    width: 100%;
+    background: #000000;
+    opacity: 0;
+    border-radius: 10px;
+}
+
+.card:hover .onHover--card {
+    opacity: 0.7;
+    transition: 0.6s ease-in-out;
+}
+.onHover--header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.onHover--footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: #FFFFFF;
+}
+.onHover--border{
+    border-right: 1px solid #FFFFFF;
+    padding-right: .5rem;
+    margin-right:  .5rem;
+}
+.onHover--stars{
+    color: var(--yellow);
+}
+.fa-eye{
+    padding-right: 0.4rem;
+}

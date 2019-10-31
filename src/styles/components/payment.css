@@ -1,0 +1,117 @@
+.paymentpage{
+    background: linear-gradient(180deg, #1A1919 15.43%, rgba(55, 55, 55, 0) 100%), #3F3F3F;
+    mix-blend-mode: multiply;
+    height: 100vh;
+    width: 100vw;
+}
+.paymentpage--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.1rem;
+}
+.paymentpage--header>img{
+    width: 13.5rem;
+    height: 3.6rem;
+}
+.paymentpage--body{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
+    
+}
+.sticker{
+    position: absolute;
+    top: -3.5rem;
+    right: -9rem;
+    z-index: 2;
+}
+.paymentpage--form{
+    position: relative;
+    width: 46.3rem;
+    height: 36.1rem;
+    padding: 5rem 7rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+}
+.paymentpage--form input{
+    border: none;
+    border-bottom: 1px solid #858585;
+    padding: 1rem 0rem;
+    width: 31.2rem; 
+}
+.paymentpage--form input::placeholder{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #3F3F3F;
+    opacity: 0.4;
+}
+.paymentpage--form input:focus{
+    outline: none;
+}
+.paymentpage--body>button{
+    margin-left: 14rem;
+}
+.paymentpage--inline{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.5rem
+}
+.paymentpage--inline .start{
+    width: 18rem;
+}
+.paymentpage--inline .end{
+    width: 7.0rem;
+    margin-right: 1rem;
+}
+.paymentpage--footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0rem;
+}
+
+/* ------------------------------------------------------------ALL-MEDIA-QUERIES --------------------------------------------------------------*/
+@media only screen  and (max-height: 736px) and (max-width: 840px){
+    .paymentpage--form{
+        height: 36.1rem;
+        width:  30.77rem
+    }
+    .sticker{
+        width: 8rem;
+        height: 6rem;
+        top: -2rem;
+        right: -2rem;
+    }
+    .paymentpage--form {
+        padding: 4rem;
+    }
+    .paymentpage--form input{
+        width: 20rem;
+    }
+   
+    .paymentpage--inline .start{
+        width: 15rem;
+    }
+    .paymentpage--inline .end{
+        width: 4rem;
+    }
+    .paymentpage--button>.yellow--button{
+        width: 1rem
+    }
+    .paymentpage--footer{
+        padding: 3rem 2rem;
+    }
+    .footer--start{
+        width: 10rem
+    }
+    .footer--end{
+        width: 20rem;
+    }
+}

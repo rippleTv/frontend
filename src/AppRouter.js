@@ -7,6 +7,7 @@ import Login from './components/Login';
 import LandingPage from './components/LandingPage';
 import Signup from './components/Signup';
 import SubscriptionPage from './components/SubscriptionPage';
+import MoviesPage from './components/MoviesPage';
 
 function AppRouter() {
 	return (
@@ -16,6 +17,7 @@ function AppRouter() {
 				<Route path={ROUTES.SIGN_IN} component={Login}></Route>
 				<Route path={ROUTES.SIGN_UP} component={Signup}></Route>
 				<Route path={ROUTES.SUBSCRIPTION} component={SubscriptionPage}></Route>
+				<Route path={ROUTES.MOVIES} component={MoviesPage}></Route>
 			</Switch>
 		</Router>
 	);

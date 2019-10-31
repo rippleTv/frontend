@@ -13,7 +13,7 @@ class NavBar extends Component {
     render() { 
         return ( 
             <div>
-                <nav className="generic--navbar">
+                <nav className={`generic--navbar ${this.props.giveClass}`}>
                 <img src={logo} alt="ripple-logo"/>
                 <div className="nav--items">
                     <div className="nav--item">Home</div>
@@ -25,7 +25,7 @@ class NavBar extends Component {
                     <i className="fas fa-user-circle"></i>
             </nav>
 
-            <nav className="generic--navbar__sm">
+            <nav className={`generic--navbar__sm ${this.props.giveClass}`}>
                 <i className="fas fa-bars" onClick={this.handleHamburger}></i>
                 <img src={logo} alt="ripple-logo"/>
 

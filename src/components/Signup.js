@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ripple from '../img/Ripple-Logo.png';
 import googleIcon from '../img/google-icon.svg';
+import * as ROUTES from '../routes';
 
-function Signup() {
-	return (
-		<section className="signup">
+class Signup extends Component {
+	state = {  }
+
+	handleLogIn = () => {
+		this.props.history.push(ROUTES.SIGN_IN);
+	}
+
+	handleSubscription = () => {
+		
+	}
+	render() { 
+		return ( 
+			<section className="signup">
 			<div className="container">
 				<header className="signup--header">
 					<img src={ripple} width="135" height="36" alt="" />
@@ -14,7 +25,7 @@ function Signup() {
 						<h1>Watch Great</h1>
 						<h1>Nollywood Movies</h1>
 						<p>Thousands of Movies. Watch on any device</p>
-						<button>LOG IN</button>
+						<button onClick={this.handleLogIn}>LOG IN</button>
 					</div>
 					<form action="" className="signup--form">
 						<div class="signup--google">
@@ -47,12 +58,14 @@ function Signup() {
 							</span>
 						</div>
 
-						<button class="signup--button">Sign up</button>
+						<button class="signup--button" onClick={this.handleSubscription}>Sign up</button>
 					</form>
 				</div>
 			</div>
 		</section>
-	);
+		 );
+	}
 }
-
+ 
 export default Signup;
+

@@ -39,6 +39,9 @@ body {
 .clickable {
 	cursor: pointer;
 }
+button:focus{
+	outline: none;
+}
 
 /* Base
 ========================================================================== */
@@ -50,8 +53,12 @@ body {
 @import 'components/landingpage.css';
 @import 'components/login.css';
 @import 'components/signup.css';
-@import 'components/button.css';
-@import 'components/navbar.css';
-@import 'components/dropdown.css';
+@import  'components/button.css';
+@import  'components/navbar.css';
+@import  'components/dropdown.css';
+@import  'components/payment.css';
+@import  'components/homepage.css';
+@import  'components/imageCard.css';
+@import  'components/imageSlider.css';
 @import 'components/subscriptionpage.css';
 @import 'components/moviespage.css';

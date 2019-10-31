@@ -13,7 +13,7 @@ class NavBar extends Component {
     render() { 
         return ( 
             <div>
-                <nav className={`generic--navbar ${this.props.giveClass}`}>
+                <nav className={`${this.props.giveClass} generic--navbar`}>
                 <img src={logo} alt="ripple-logo"/>
                 <div className="nav--items">
                     <div className="nav--item">Home</div>

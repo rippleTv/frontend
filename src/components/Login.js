@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
+import * as ROUTES from '../routes';
 
-function Login() {
-	return (
-		<div className="login">
+class Login extends Component {
+	state = {  }
+
+	handleSignUp = () => {
+		this.props.history.push(ROUTES.SIGN_UP);
+	}
+	render() { 
+		return ( 
+			<div className="login">
 			<div className="login_aside">
 				<img src="logo1.png" alt="logo"></img>
 				<div className="login_aside_body">
 					<h2>Watch Great Nollywood movies</h2>
 					<h3>Thousands of Movies. Watch on any device</h3>
-					<button className="signButton">SIGN UP</button>
+					<button className="signButton" onClick={this.handleSignUp}>SIGN UP</button>
 				</div>
 			</div>
 			<form action="" className="login_form">
@@ -28,7 +35,8 @@ function Login() {
 				</div>
 			</form>
 		</div>
-	);
+		 );
+	}
 }
-
-export default Login;
+ 
+export default Login ;

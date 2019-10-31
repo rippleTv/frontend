@@ -1,117 +1,128 @@
-.paymentpage{
-    background: linear-gradient(180deg, #1A1919 15.43%, rgba(55, 55, 55, 0) 100%), #3F3F3F;
-    mix-blend-mode: multiply;
-    height: 100vh;
-    width: 100vw;
+.paymentpage {
+	background: linear-gradient(180deg, #1a1919 15.43%, rgba(55, 55, 55, 0) 100%),
+		#3f3f3f;
+	mix-blend-mode: multiply;
+	height: 100vh;
+	width: 100vw;
 }
-.paymentpage--header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4.1rem;
+.paymentpage--header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4.1rem;
 }
-.paymentpage--header>img{
-    width: 13.5rem;
-    height: 3.6rem;
+.paymentpage--header > img {
+	width: 13.5rem;
+	height: 3.6rem;
 }
-.paymentpage--body{
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative
-    
+.paymentpage--body {
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 }
-.sticker{
-    position: absolute;
-    top: -3.5rem;
-    right: -9rem;
-    z-index: 2;
+.sticker {
+	position: absolute;
+	top: -3.5rem;
+	right: -9rem;
+	z-index: 2;
 }
-.paymentpage--form{
-    position: relative;
-    width: 46.3rem;
-    height: 36.1rem;
-    padding: 5rem 7rem;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.9);
-    border-radius: 10px;
+.paymentpage--form {
+	position: relative;
+	width: 46.3rem;
+	/* height: 36.1rem; */
+	padding: 5rem 7rem;
+	background: #ffffff;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.9);
+	border-radius: 10px;
 }
-.paymentpage--form input{
-    border: none;
-    border-bottom: 1px solid #858585;
-    padding: 1rem 0rem;
-    width: 31.2rem; 
+
+.paymentpage--form .form-payment-input {
+	margin: 30px 0px;
 }
-.paymentpage--form input::placeholder{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    color: #3F3F3F;
-    opacity: 0.4;
+.paymentpage--form input,
+.StripeElement {
+	border: none;
+	border-bottom: 1px solid #858585;
+	padding: 1rem 0rem;
+	width: 100%;
+	font-size: 16px;
+	font-family: 'Roboto', monospace;
+	outline: 0;
 }
-.paymentpage--form input:focus{
-    outline: none;
+
+.paymentpage--form .error-message {
+	font-style: italic;
+	font-weight: 500;
+	font-size: 14px;
+	color: #942631;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+	padding: 0.75rem 1.25rem;
+	margin-bottom: 2rem;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
 }
-.paymentpage--body>button{
-    margin-left: 14rem;
+
+.paymentpage--form input::placeholder {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.4rem;
+	line-height: 1.6rem;
+	color: #bcc1c5;
 }
-.paymentpage--inline{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 4.5rem
+.paymentpage--form input:focus {
+	outline: none;
 }
-.paymentpage--inline .start{
-    width: 18rem;
+.paymentpage--body > button {
+	margin-left: 14rem;
 }
-.paymentpage--inline .end{
-    width: 7.0rem;
-    margin-right: 1rem;
+.paymentpage--inline {
+	display: flex;
+	margin-bottom: 4.5rem;
 }
-.paymentpage--footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 0rem;
+.paymentpage--inline .start {
+	width: 65%;
+	margin-right: auto;
+}
+.paymentpage--inline .end {
+	width: 20%;
+	margin-left: auto;
+}
+.paymentpage--footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 0rem;
 }
 
 /* ------------------------------------------------------------ALL-MEDIA-QUERIES --------------------------------------------------------------*/
-@media only screen  and (max-height: 736px) and (max-width: 840px){
-    .paymentpage--form{
-        height: 36.1rem;
-        width:  30.77rem
-    }
-    .sticker{
-        width: 8rem;
-        height: 6rem;
-        top: -2rem;
-        right: -2rem;
-    }
-    .paymentpage--form {
-        padding: 4rem;
-    }
-    .paymentpage--form input{
-        width: 20rem;
-    }
-   
-    .paymentpage--inline .start{
-        width: 15rem;
-    }
-    .paymentpage--inline .end{
-        width: 4rem;
-    }
-    .paymentpage--button>.yellow--button{
-        width: 1rem
-    }
-    .paymentpage--footer{
-        padding: 3rem 2rem;
-    }
-    .footer--start{
-        width: 10rem
-    }
-    .footer--end{
-        width: 20rem;
-    }
+@media only screen and (max-height: 736px) and (max-width: 840px) {
+	.paymentpage--form {
+		width: 30.77rem;
+	}
+	.sticker {
+		width: 8rem;
+		height: 6rem;
+		top: -2rem;
+		right: -2rem;
+	}
+	.paymentpage--form {
+		padding: 4rem;
+	}
+
+	.paymentpage--button > .yellow--button {
+		width: 1rem;
+	}
+	.paymentpage--footer {
+		padding: 3rem 2rem;
+	}
+	.footer--start {
+		width: 10rem;
+	}
+	.footer--end {
+		width: 20rem;
+	}
 }

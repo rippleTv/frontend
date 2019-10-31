@@ -72,7 +72,7 @@ class LandingPage extends Component {
 							className={`far fa-${this.state.sliderAnim}-circle`}
 							onClick={this.handleClick}
 						></i>
-					</div>
+					</div>					
 				</div>
 			</div>
 		);

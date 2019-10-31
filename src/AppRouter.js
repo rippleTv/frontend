@@ -8,6 +8,8 @@ import LandingPage from './components/LandingPage';
 import Signup from './components/Signup';
 import PaymentPage from './components/payment';
 import HomePage from './components/HomePage';
+import SeriesPage from './components/SeriesPage';
+
 
 function AppRouter() {
 	return (
@@ -18,6 +20,7 @@ function AppRouter() {
 				<Route path={ROUTES.SIGN_UP} component={Signup}></Route>
 				<Route path={ROUTES.PAYMENT} component={PaymentPage}></Route>
 				<Route path={ROUTES.HOMEPAGE} component={HomePage}></Route>
+				<Route path={ROUTES.SERIESPAGE} component={SeriesPage}></Route>
 			</Switch>
 		</Router>
 	);

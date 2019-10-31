@@ -10,6 +10,7 @@ import Signup from './components/Signup';
 import PaymentPage from './components/payment';
 import HomePage from './components/HomePage';
 import SubscriptionPage from './components/SubscriptionPage';
+import MoviesPage from './components/MoviesPage';
 
 function AppRouter() {
 	return (
@@ -30,6 +31,7 @@ function AppRouter() {
 				></Route>
 				<Route path={ROUTES.HOMEPAGE} component={HomePage}></Route>
 				<Route path={ROUTES.SUBSCRIPTION} component={SubscriptionPage}></Route>
+				<Route path={ROUTES.MOVIES} component={MoviesPage}></Route>
 			</Switch>
 		</Router>
 	);

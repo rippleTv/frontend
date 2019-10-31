@@ -5,7 +5,7 @@ import '../'
 const Button = (props) => {
     const className = props.buttonType ? "yellow--button": "transparent--button"
     return ( 
-        <button className={className} style={{
+        <button className={`${props.giveClass} ${className}`} style={{
             width: props.width,
             height: props.height,
         }}>{props.label}</button>

@@ -34,6 +34,7 @@ class HomePage extends Component {
 					{({ index }) => (
 						<>
 							<img
+								className="ticker__img"
 								src={headerpic}
 								alt="slider"
 								width="1152px"

@@ -34,7 +34,7 @@ class NavBar extends Component {
                 
             </nav>
            
-            {this.state.display === true && <Dropp contents={["Home","Movies","Series","My List"]}/>}
+            {this.state.display === true && <Dropp giveClass="navbar--dropdown" contents={["Home","Movies","Series","My List"]}/>}
            
             </div>
 

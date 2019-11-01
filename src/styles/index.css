@@ -60,5 +60,6 @@ button:focus{
 @import  'components/homepage.css';
 @import  'components/imageCard.css';
 @import  'components/imageSlider.css';
+@import  'components/seriespage.css';
 @import 'components/subscriptionpage.css';
 @import 'components/moviespage.css';

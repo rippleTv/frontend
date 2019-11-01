@@ -19,15 +19,16 @@
 .nav--item{
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.6rem;
     margin-right: 3.0rem;
-    color: white
+    color: white;
+    letter-spacing: 1px;
 }
 .fa-search{
     align-self: center;
-    font-size: 2.0rem;
+    font-size: 2rem;
     color: white;
     margin-right: 4.0rem;
 }
@@ -47,6 +48,9 @@
     color: white;
     /* padding: 1.5rem; */
     margin-left: 3.0rem;
+}
+.fa-bars:hover{
+    cursor: pointer;
 }
 .generic--navbar__sm>img{
     width: 13.6rem;
@@ -84,4 +88,9 @@
      
     }
 
+}
+@media only screen and (min-width: 821px ){
+    .navbar--dropdown{
+        display: none;
+    }
 }

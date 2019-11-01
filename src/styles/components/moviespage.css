@@ -1,6 +1,6 @@
-.movies__page{
+/* .movies__page{
     position:relative
-}
+} */
 
 .movies__header{
 position: relative;
@@ -63,3 +63,14 @@ line-height: 23px;
 color: #F9B109;
 
 }
+ .movies__slider{
+    margin-top: 7.5rem;
+    margin-right: 9.9rem;  
+ }
+
+ .movies__border{
+    margin: 0 auto;
+    width:75%;
+    border-top: .01rem solid #858585;
+    padding-top: 9rem;
+ }

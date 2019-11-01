@@ -43,7 +43,7 @@ class ImageSlider extends Component {
       <div className="generic--slider">
             <h1>{this.props.sliderTitle}</h1>
           <Carousel responsive={responsive} autoPlaySpeed={5000} infinite={true} autoPlay={true} removeArrowOnDeviceType={['tablet','tab','mobile']} containerClass="slider" sliderClass="hit" itemClass="floppy">
-				{this.props.images.map((data, id) => (<Card key={id} image={data.name}/>))}
+				{this.props.images.map((data, id) => (<Card key={id} image={data.name} imageTitle={data.cardTitle}/>))}
 		   </Carousel>;
 
       </div>
@@ -52,7 +52,7 @@ class ImageSlider extends Component {
 }
 
 ImageSlider.defaultProps ={
-   images: [{name: img1}, {name: img2}, {name: img3}, {name: img4}],
+   images: [{name: img1, cardTitle:"Omugwo"}, {name: img2, cardTitle:"Omugwo"}, {name: img3, cardTitle:"Omugwo"}, {name: img4, cardTitle:"Omugwo"}],
    sliderTitle: "Coming Soon"
 }
 

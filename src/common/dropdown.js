@@ -4,7 +4,7 @@ class Drop extends Component {
     
     render() { 
         return ( 
-            <div className="dropdown" >
+            <div className={`dropdown ${this.props.giveClass}`} >
                 <div  style={{
                     display:"flex",
                     flexDirection:"column",

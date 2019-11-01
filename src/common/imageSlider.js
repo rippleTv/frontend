@@ -40,7 +40,7 @@ class ImageSlider extends Component {
       }; 
 
     return (
-      <div className="generic--slider">
+      <div className={`generic--slider ${this.props.giveClass}`}>
             <h1>{this.props.sliderTitle}</h1>
           <Carousel responsive={responsive} autoPlaySpeed={5000} infinite={true} autoPlay={true} removeArrowOnDeviceType={['tablet','tab','mobile']} containerClass="slider" sliderClass="hit" itemClass="floppy">
 				{this.props.images.map((data, id) => (<Card key={id} image={data.name}/>))}

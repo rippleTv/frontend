@@ -4,7 +4,9 @@ html {
 body {
 	font-family: Roboto, Helvetica, sans-serif;
 }
-
+.w-100 {
+	width: 100%;
+}
 .container {
 	width: 100%;
 	padding-right: 15px;
@@ -39,7 +41,7 @@ body {
 .clickable {
 	cursor: pointer;
 }
-button:focus{
+button:focus {
 	outline: none;
 }
 
@@ -64,3 +66,5 @@ button:focus{
 @import  'components/dashnav.css';
 @import 'components/subscriptionpage.css';
 @import 'components/moviespage.css';
+@import 'components/listPage.css';
+@import 'components/streamingpage.css';

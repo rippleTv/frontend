@@ -1,0 +1,88 @@
+.listpage__header{
+    width: 100%;
+    height: 33.2rem;
+    background:  url('./../../img/moviesposter.png');
+    background-size:cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.listpage__nav{
+    width: 100vw;
+    margin: 0 auto;
+}
+.listpage__head{
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 auto 4rem;
+}
+.listpage__head>h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 5rem;
+    line-height: 5rem;
+    color: #FFFFFF;
+}
+.listpage__head>p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    line-height: 2rem;
+    color: #FFFFFF;
+}
+.listpage__middle{
+    width: 90%;
+    display: flex;
+    padding: 1rem;
+    margin-top: 7.9rem ;
+    margin-bottom: 2rem;
+    margin-left: 19.0rem;
+
+}
+.listpage__filter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 5.5rem;
+}
+.listpage__filter>h3{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    color: var(--yellow);
+}
+/* .listpage__drops{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e8e8e8;
+    width: 17rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #858585;
+}
+.list__dropdown{
+    top: 65px;
+    left: 240px;
+} */
+.listpage--body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100.9rem;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 600px){
+    .listpage__middle{
+        display: none;
+    }
+}

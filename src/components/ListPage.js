@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
 import NavBar from '../common/navbar'
-import Button from '../common/button'
-import ImageSlider from '../common/imageSlider'
-import DropDown from '../common/dropdown'
+import ImageCard from "../common/imageCard";
+import DropDown from '../common/dropdown';
+import img1 from "../img/img.png";
+import img2 from "../img/img1.png";
+import img3 from "../img/img2.png";
+import img4 from "../img/img3.png";
 
 
 class ListPage extends Component {
     state = { 
         displayGenre: false,
         displayDate: false,
-        displayQuality: false
+        displayQuality: false,
+        imageData: [
+            {name: "Omugwo", image: img1},
+            {name: "Mokalik", image: img2},
+            {name: "Ayamma", image: img3},
+            {name: "ije", image: img4},
+            {name: "Omugwo", image: img1},
+            {name: "Mokalik", image: img2},
+            {name: "Ayamma", image: img3},
+            {name: "Ije", image: img4},
+        ]
      }
 
      handleDrop = (display) => {
@@ -21,21 +34,7 @@ class ListPage extends Component {
         displayQuality: false
         })
 
-        // if (display == "date")
-        // this.setState({
-        // displayGenre: false,
-        // displayDate: !this.state.displayDate,
-        // displayQuality: false
-        // })
-
-        // if (display == "quality")
-        // this.setState({
-        // displayGenre: false,
-        // displayDate: false,
-        // displayQuality: !this.state.displayQuality
-        // })
-     }
-
+    }
     render() { 
         return ( 
             <div className="listpage">
@@ -50,26 +49,28 @@ class ListPage extends Component {
                 </div>
 
                 <div className="listpage__middle">
-                    <div className="listpage__filter">
+                    {/* <div className="listpage__filter">
                         <h3>Category</h3>
                         <div className="listpage__drops">
                             My List <i onClick={() => this.handleDrop("my list")} className="fas fa-chevron-down"></i>
                         </div>
                     </div>
-                    {this.state.displayGenre && <DropDown giveClass="list__dropdown" contents={["Drama", "Comedy", "Thriller"]}/>}
+                    {this.state.displayGenre && <DropDown giveClass="list__dropdown" contents={["Drama", "Comedy", "Thriller"]}/>} */}
                     
                 </div>
-               
 
-                <ImageSlider sliderTitle=""/>
-                <ImageSlider sliderTitle="" />
+                <div className="listpage--body">
+                    {this.state.imageData.map((data)=> {
+                        return  <ImageCard imageTitle= {data.name} image={data.image}/>
+                    })}
+                </div>
+
+               
             
 
-                <div className="home__footer">
-
-				</div>
-
             </div>
+
+
          );
     }
 }

@@ -57,7 +57,7 @@
     line-height: 2.6rem;
     color: var(--yellow);
 }
-.listpage__drops{
+/* .listpage__drops{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #e8e8e8;
@@ -73,6 +73,13 @@
 .list__dropdown{
     top: 65px;
     left: 240px;
+} */
+.listpage--body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100.9rem;
+    margin: 0 auto;
 }
 @media only screen and (max-width: 600px){
     .listpage__middle{

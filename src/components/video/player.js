@@ -97,14 +97,15 @@ export default class player extends Component {
 
 	handleTogglePlay = () => {
 		const videoElem = this.refs.video;
+
+		this.setState({
+			paused: videoElem.paused
+		});
 		if (videoElem.paused) {
 			videoElem.play();
 		} else {
 			videoElem.pause();
 		}
-		this.setState({
-			paused: videoElem.paused
-		});
 	};
 
 	handleVolumeChange = e => {
@@ -166,7 +167,7 @@ export default class player extends Component {
 						volume={volume}
 						handleSeek={this.handleSeek}
 						handleVolumeChange={this.handleVolumeChange}
-						handleFullScreenChange={this.handleVolumeChange}
+						handleFullScreenChange={this.handleFullScreenChange}
 						handleTogglePlay={this.handleTogglePlay}
 						handleToggleMute={this.toggleMute}
 					/>

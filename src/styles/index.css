@@ -62,3 +62,5 @@ button:focus{
 @import  'components/imageSlider.css';
 @import  'components/seriespage.css';
 @import  'components/dashnav.css';
+@import 'components/subscriptionpage.css';
+@import 'components/moviespage.css';

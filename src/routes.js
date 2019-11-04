@@ -5,6 +5,7 @@ export const PAYMENT = '/payment';
 export const HOMEPAGE = '/home';
 export const SERIESPAGE = '/seriespage';
 export const SUBSCRIPTION = '/subscription';
+export const MOVIES ='/movies'
 export const MOVIES ='/movies';
 export const ListPage ='/lists';
 export const STREAM = '/stream';

@@ -25,7 +25,7 @@ class NavBar extends Component {
                     <i className="fas fa-user-circle"></i>
             </nav>
 
-            <nav className="generic--navbar__sm">
+            <nav className={`${this.props.giveClassSM} generic--navbar__sm`}>
                 <i className="fas fa-bars" onClick={this.handleHamburger}></i>
                 <img src={logo} alt="ripple-logo"/>
 

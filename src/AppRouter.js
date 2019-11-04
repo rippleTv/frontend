@@ -9,6 +9,7 @@ import Signup from './components/Signup';
 import PaymentPage from './components/payment';
 import HomePage from './components/HomePage';
 import SeriesPage from './components/SeriesPage';
+import DashNav from './common/dashNav';
 
 
 function AppRouter() {
@@ -21,6 +22,7 @@ function AppRouter() {
 				<Route path={ROUTES.PAYMENT} component={PaymentPage}></Route>
 				<Route path={ROUTES.HOMEPAGE} component={HomePage}></Route>
 				<Route path={ROUTES.SERIESPAGE} component={SeriesPage}></Route>
+				<Route path={ROUTES.DASHNAV} component={DashNav}></Route>
 			</Switch>
 		</Router>
 	);

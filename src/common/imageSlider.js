@@ -35,6 +35,7 @@ class ImageSlider extends Component {
 			}
 		};
 
+
 		return (
 			<div className="container">
 				<div className={`generic--slider ${this.props.giveClass}`}>

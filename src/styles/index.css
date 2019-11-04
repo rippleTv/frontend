@@ -65,4 +65,5 @@ button:focus {
 @import 'components/seriespage.css';
 @import 'components/subscriptionpage.css';
 @import 'components/moviespage.css';
+@import 'components/listPage.css';
 @import 'components/streamingpage.css';

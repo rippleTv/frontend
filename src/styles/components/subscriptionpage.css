@@ -50,17 +50,18 @@
 	padding: 1rem 9rem;
 }
 
-.subscription__card {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: column;
-	align-items: center;
-	width: 26.9rem;
-	height: 37.7rem;
-	top: 23.5rem;
-	background: #ffffff;
-	box-shadow: 0rem 0.4rem 1rem rgba(0, 0, 0, 0.9);
-	border-radius: 1rem;
+.subscription__card{
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+align-items: center;
+width: 26.9rem; 
+height: 37.7rem;
+top: 23.5rem;
+background: #FFFFFF;
+box-shadow: .0rem .4rem 1.0rem rgba(0, 0, 0, 0.9);
+border-radius: 1.0rem;
+
 }
 .card__head {
 	display: flex;

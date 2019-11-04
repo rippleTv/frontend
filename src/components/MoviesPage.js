@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import Drop from '../common/dropdown';
 import NavBar from './../common/navbar';
+import ImageSlider from'./../common/imageSlider';
+import img1 from "./../img/img.png";
+import img2 from "./../img/img1.png";
+import img3 from "./../img/img2.png";
+import img4 from "./../img/img3.png";
+
+
 
 
 class Movies extends Component {
@@ -69,7 +76,19 @@ class Movies extends Component {
                 </div>
         </div>
 
+           
+
     </div>
+    <div className="movies__slider">
+         <ImageSlider sliderTitle="Coming Soon" />
+         <div className="movies__border"></div>
+         <ImageSlider sliderTitle="Popular"/>
+         <div className="movies__border"></div>
+         <ImageSlider sliderTitle="Trending"/>
+         <div className="movies__border"></div>
+         
+    </div>
+   
 
 </section>
          );
@@ -79,3 +98,4 @@ class Movies extends Component {
 export default Movies;
 
 
+ 

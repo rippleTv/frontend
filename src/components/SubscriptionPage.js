@@ -47,7 +47,7 @@ function Subscription() {
                     </div>
                     <Button label={"SUBSCRIBE"} buttonType={false} giveClass="sub--button"></Button>
                 </div>
-                <div className="card">
+                <div className="subscription__card">
                    <div className="card__head">
                         <h1>PREMIUM</h1>
                         <h2>$11.99 per month</h2>

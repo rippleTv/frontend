@@ -4,7 +4,9 @@ html {
 body {
 	font-family: Roboto, Helvetica, sans-serif;
 }
-
+.w-100 {
+	width: 100%;
+}
 .container {
 	width: 100%;
 	padding-right: 15px;
@@ -40,7 +42,7 @@ body {
 .clickable {
 	cursor: pointer;
 }
-button:focus{
+button:focus {
 	outline: none;
 }
 
@@ -69,3 +71,5 @@ button:focus{
 @import 'components/userprofile.css';
 @import 'components/usersub.css';
 @import 'components/userpassword.css';
+@import 'components/listPage.css';
+@import 'components/streamingpage.css';

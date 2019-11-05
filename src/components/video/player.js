@@ -42,7 +42,7 @@ export default class player extends Component {
 			const videoElem = this.refs.video;
 			videoElem.play();
 
-			const loaded = await this.player.load(this.props.src);
+			await this.player.load(this.props.src);
 			// This runs if the asynchronous load is successful.
 			console.log('Video Loaded');
 			this.setState({ showControls: true });

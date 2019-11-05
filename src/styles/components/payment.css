@@ -52,19 +52,6 @@
 	outline: 0;
 }
 
-.paymentpage--form .error-message {
-	font-style: italic;
-	font-weight: 500;
-	font-size: 14px;
-	color: #942631;
-	background-color: #f8d7da;
-	border-color: #f5c6cb;
-	padding: 0.75rem 1.25rem;
-	margin-bottom: 2rem;
-	border: 1px solid transparent;
-	border-radius: 0.25rem;
-}
-
 .paymentpage--form input::placeholder {
 	font-style: normal;
 	font-weight: normal;

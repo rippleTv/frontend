@@ -23,7 +23,7 @@ class LandingPage extends Component {
 		this.setState({ move, sliderAnim: anim });
 	};
 
-	handleSignUp = () => {
+	routeToSignup = () => {
 		this.props.history.push(ROUTES.SIGN_UP);
 	};
 
@@ -59,7 +59,7 @@ class LandingPage extends Component {
 					<div className="landing--body">
 						<h1>The Best Of Nollywood</h1>
 						<p>Thousands of movies. Watch on any device</p>
-						<button onClick={this.handleSignUp}>START WATCHING</button>
+						<button onClick={this.routeToSignup}>START WATCHING</button>
 					</div>
 
 					<div className="landing--footer">
@@ -72,7 +72,7 @@ class LandingPage extends Component {
 							className={`far fa-${this.state.sliderAnim}-circle`}
 							onClick={this.handleClick}
 						></i>
-					</div>					
+					</div>
 				</div>
 			</div>
 		);

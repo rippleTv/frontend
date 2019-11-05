@@ -50,7 +50,7 @@ color: #FFFFFF;
     padding: 1.0rem 9.0rem;
 }
 
-.card{
+.subscription--card{
 display: flex;
 justify-content: space-between;
 flex-direction: column;

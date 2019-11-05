@@ -13,6 +13,7 @@ body {
 	margin-left: auto;
 }
 
+
 @media (min-width: 576px) {
 	.container {
 		max-width: 540px;
@@ -64,3 +65,7 @@ button:focus{
 @import  'components/dashnav.css';
 @import 'components/subscriptionpage.css';
 @import 'components/moviespage.css';
+@import 'components/usersection.css';
+@import 'components/userprofile.css';
+@import 'components/usersub.css';
+@import 'components/userpassword.css';

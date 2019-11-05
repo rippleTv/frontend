@@ -1,6 +1,6 @@
 .dash--nav{
     width: 25%;
-    height: 100%;
+  
     background: #1D1C1C;
     margin-top: 0;
 
@@ -26,12 +26,15 @@
     width: 100%;
     text-decoration: none;
     letter-spacing: 1px;
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     line-height: 23px;
     padding: 20px 40px;
+}
+.dash--nav__item:hover{
+    cursor: pointer;
 }
 .dashy{
     padding: 15px 27%;
@@ -41,7 +44,7 @@
 .dash--nav__sm{
     display: none;
     width: 7%;
-    height: 100%;
+    
     background: #1D1C1C;
     margin-top: 0px;
 }
@@ -60,7 +63,7 @@
     width: 100%;
     height: 60px;
 }
-.dash--nav__item:hover, .dash--nav__item__sm:hover{
+.dash--nav__item:hover, .dash--nav__item__sm:hover, .dash--active{
     background: var(--yellow)
 }
 

@@ -17,7 +17,7 @@ function Subscription() {
                <h1> Nollywood movies on   <span className="highlight">  Ripple</span> </h1>
             </div>
             <div className="subscription__body">
-                <div className="card">
+                <div className="subscription--card">
                    <div className="card__head">
                        <h1>BASIC</h1>
                        <h2>$7.99 per month</h2>

@@ -12,6 +12,7 @@ import HomePage from './components/HomePage';
 import SeriesPage from './components/SeriesPage';
 import SubscriptionPage from './components/SubscriptionPage';
 import MoviesPage from './components/MoviesPage';
+import UserSection from './components/UserSection';
 
 
 function AppRouter() {
@@ -35,6 +36,7 @@ function AppRouter() {
 				<Route path={ROUTES.SERIESPAGE} component={SeriesPage}></Route>
 				<Route path={ROUTES.SUBSCRIPTION} component={SubscriptionPage}></Route>
 				<Route path={ROUTES.MOVIES} component={MoviesPage}></Route>
+				<Route path={ROUTES.USER} component ={UserSection}></Route>
 			</Switch>
 		</Router>
 	);

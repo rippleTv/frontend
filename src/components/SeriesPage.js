@@ -46,7 +46,6 @@ class SeriePage extends Component {
                         <h1>Nollywood Series</h1>
                         <p className="firstP">Enjoy varieties of amazing Nollywood movies</p>
                         <p className="lastP">from top notch actors and superstars.</p>
-                        <Button label="Watch Now" buttonType={true}/>
 				    </div>
                 </div>
 

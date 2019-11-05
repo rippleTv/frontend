@@ -1,9 +1,18 @@
-* , *::after, *::before {
-    margin: 0;
-    padding : 0;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    overflow-x: hidden;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: inherit;
+	font-style: inherit;
 }

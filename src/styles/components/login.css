@@ -203,6 +203,7 @@
 		align-self: center;
 	}
 	.login_form {
-		margin: 2rem 0rem;
+		margin: 5rem 0rem;
+		padding: 20px 0rem;
 	}
 }

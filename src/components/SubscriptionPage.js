@@ -1,8 +1,6 @@
 import React from 'react';
 import ripple from '../img/Ripple-Logo.png';
-import Button from '../common/button'
-
-
+import Button from '../common/button';
 
 function Subscription() {
 	return (

@@ -12,6 +12,7 @@ import HomePage from './components/HomePage';
 import SeriesPage from './components/SeriesPage';
 import SubscriptionPage from './components/SubscriptionPage';
 import MoviesPage from './components/MoviesPage';
+import UserSection from './components/UserSection';
 import ListPage from './components/ListPage';
 import StreamingPage from './components/StreamingPage';
 
@@ -37,6 +38,7 @@ function AppRouter() {
 				<Route path={ROUTES.SERIESPAGE} component={SeriesPage}></Route>
 				<Route path={ROUTES.SUBSCRIPTION} component={SubscriptionPage}></Route>
 				<Route path={ROUTES.MOVIES} component={MoviesPage}></Route>
+				<Route path={ROUTES.USER} component ={UserSection}></Route>
 				<Route path={ROUTES.ListPage} component={ListPage}></Route>
 				<Route path={ROUTES.STREAM} component={StreamingPage}></Route>
 			</Switch>

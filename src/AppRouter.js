@@ -18,6 +18,7 @@ import HomePage from './components/HomePage';
 import SeriesPage from './components/SeriesPage';
 import SubscriptionPage from './components/SubscriptionPage';
 import MoviesPage from './components/MoviesPage';
+import UserSection from './components/UserSection';
 import ListPage from './components/ListPage';
 import StreamingPage from './components/StreamingPage';
 
@@ -59,6 +60,7 @@ function AppRouter() {
 				<PrivateRoute path={ROUTES.MOVIES} component={MoviesPage} />
 				<PrivateRoute path={ROUTES.ListPage} component={ListPage} />
 				<PrivateRoute path={ROUTES.STREAM} component={StreamingPage} />
+				<PrivateRoute path={ROUTES.USER} component={UserSection} />
 			</Switch>
 		</Router>
 	);

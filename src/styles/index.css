@@ -5,6 +5,7 @@ body {
 	font-family: Roboto, Helvetica, sans-serif;
 }
 
+
 /* Base
 ========================================================================== */
 @import 'base/normalize.css';
@@ -26,6 +27,10 @@ body {
 @import  'components/dashnav.css';
 @import 'components/subscriptionpage.css';
 @import 'components/moviespage.css';
+@import 'components/usersection.css';
+@import 'components/userprofile.css';
+@import 'components/usersub.css';
+@import 'components/userpassword.css';
 @import 'components/listPage.css';
 @import 'components/streamingpage.css';
 @import 'components/spinner.css';

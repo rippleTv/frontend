@@ -44,10 +44,13 @@ class Login extends Component {
 
 		AuthService.login(user)
 			.then(response => {
+				console.log(this.props);
+				const { from } = this.props.location.state || {
+					from: { pathname: ROUTES.HOMEPAGE }
+				};
 				AuthService.setToken(response.data.token);
-				this.props.history.push(ROUTES.HOMEPAGE);
+				this.props.history.replace(from);
 				this.setState({ ...INTIAL_STATE });
-				// this.
 			})
 			.catch(error => {
 				this.setState({ error: error.message });

@@ -26,7 +26,7 @@
 	opacity: var(--bg-opacity);
 }
 
-.ticker{
+.tickerImage{
 	height: 100vh !important;
 }
 /*----------------------------------------------------LANDING-HEADER-STYLES ---------------------------------------------------------*/
@@ -118,6 +118,10 @@ button:hover,
 .fab:hover,
 .far:hover {
 	cursor: pointer;
+}
+.fa-play-circle:focus,
+.fa-pause-circle:focus{
+	outline: hidden;
 }
 /* -------------------------------------------------------ALL-MEDIA-QUERIES--------------------------------------------------------- */
 

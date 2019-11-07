@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
 import * as ROUTES from '../routes';
 import logo from '../img/Ripple-Logo.png';
-import Dropp from './dropdown';
+
 import NavPop from './navPop';
 
 class NavBar extends Component {
@@ -36,16 +36,6 @@ class NavBar extends Component {
 					<i className="fas fa-user-circle"></i>
 				</nav>
 
-			
-					
-				
-
-				{/* {this.state.display === true && (
-					<Dropp
-						giveClass="navbar--dropdown"
-						contents={['Home', 'Movies', 'Series', 'My List']}
-					/>
-				)} */}
 			</div>
 		);
 	}

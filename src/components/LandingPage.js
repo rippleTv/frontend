@@ -37,7 +37,7 @@ class LandingPage extends Component {
 				<Ticker speed={5} mode="chain" move={this.state.move}>
 					{({ index }) => (
 						<>
-							<img
+							<img className="tickerImage"
 								src={slider}
 								alt="slider"
 								width="1152px"

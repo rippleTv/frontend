@@ -75,4 +75,17 @@
     .seriespage--middle{
         display: none;
     }
+   
+}
+@media only screen and (max-width: 600px){
+    .seriespage--head__content>h1{
+        line-height: 3rem;
+        letter-spacing: 1.4px;
+        word-spacing: 1px;
+    }
+     .seriespage--head__content>p{
+        font-size: 1rem;
+        line-height: 1rem;
+        letter-spacing: 1px;
+    }
 }

@@ -15,6 +15,7 @@ import MoviesPage from './components/MoviesPage';
 import UserSection from './components/UserSection';
 import ListPage from './components/ListPage';
 import StreamingPage from './components/StreamingPage';
+import NavPop from './common/navPop'
 
 
 function AppRouter() {
@@ -41,6 +42,7 @@ function AppRouter() {
 				<Route path={ROUTES.USER} component ={UserSection}></Route>
 				<Route path={ROUTES.ListPage} component={ListPage}></Route>
 				<Route path={ROUTES.STREAM} component={StreamingPage}></Route>
+				<Route path={ROUTES.NAVPOP} component={NavPop}></Route>
 			</Switch>
 		</Router>
 	);

@@ -42,7 +42,7 @@ class LandingPage extends Component {
 								alt="slider"
 								width="1152px"
 								height="662px"
-								style={{ margin: 0, padding: 0 }}
+								style={{ margin: 0, padding: 0 , overflow: "hidden"}}
 							/>
 						</>
 					)}

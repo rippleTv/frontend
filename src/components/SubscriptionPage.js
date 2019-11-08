@@ -15,7 +15,7 @@ function Subscription() {
                <h1> Nollywood movies on   <span className="highlight">  Ripple</span> </h1>
             </div>
             <div className="subscription__body">
-                <div className="subscription--card">
+                <div className="subscription__card">
                    <div className="card__head">
                        <h1>BASIC</h1>
                        <h2>$7.99 per month</h2>
@@ -27,10 +27,10 @@ function Subscription() {
                         <h3>Cancel anytime</h3>
                         <h3>First Month Free</h3>
                     </div>
-                <Button label={"SUBSCRIBE"} buttonType={false} giveClass="sub--button"></Button>
+                <Button label={"SUBSCRIBE"} buttonType={false} path="/payment" giveClass="sub--button"></Button>
                     
                 </div>
-                <div className="card">
+                <div className="subscription__card">
                    <div className="card__head"> 
                         <h1>STANDARD</h1>
                         <h2>$9.99 per month</h2>
@@ -43,7 +43,7 @@ function Subscription() {
                         <h3>Cancel anytime</h3>
                         <h3>First Month Free</h3>
                     </div>
-                    <Button label={"SUBSCRIBE"} buttonType={false} giveClass="sub--button"></Button>
+                    <Button label={"SUBSCRIBE"} buttonType={false} path="/payment" giveClass="sub--button"></Button>
                 </div>
                 <div className="subscription__card">
                    <div className="card__head">
@@ -59,7 +59,7 @@ function Subscription() {
                         <h3>Cancel anytime</h3>
                         <h3>First Month Free</h3>
                     </div>
-                    <Button label={"SUBSCRIBE"} buttonType={false} giveClass="sub--button"></Button>
+                    <Button label={"SUBSCRIBE"} buttonType={false} path="/payment" giveClass="sub--button"></Button>
                 </div>
 
             </div>

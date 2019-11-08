@@ -18,8 +18,8 @@ class ImageSlider extends Component {
 			},
 			desktop: {
 				breakpoint: { max: 3000, min: 1124 },
-				items: 5
-				// slidesToSlide: 4
+				items: 5,
+				slidesToSlide: 4
 			},
 			tablet: {
 				breakpoint: { max: 1124, min: 836 },
@@ -42,9 +42,9 @@ class ImageSlider extends Component {
 					<h1>{this.props.sliderTitle}</h1>
 					<Carousel
 						responsive={responsive}
-						autoPlaySpeed={5000}
+						
 						infinite={true}
-						autoPlay={true}
+				
 						removeArrowOnDeviceType={['tablet', 'tab', 'mobile']}
 						containerClass="slider"
 						sliderClass="hit"
@@ -54,7 +54,7 @@ class ImageSlider extends Component {
 							<Card key={id} image={data.name} />
 						))}
 					</Carousel>
-					;
+					
 				</div>
 			</div>
 		);

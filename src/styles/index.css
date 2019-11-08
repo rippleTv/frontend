@@ -34,6 +34,7 @@ body {
 @import 'components/listPage.css';
 @import 'components/streamingpage.css';
 @import 'components/spinner.css';
+@import 'components/navpop.css';
 
 /* Reusable classes
 ========================================================================== */

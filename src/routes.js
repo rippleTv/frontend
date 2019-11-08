@@ -9,3 +9,4 @@ export const MOVIES = '/movies';
 export const USER = '/user';
 export const ListPage = '/lists';
 export const STREAM = '/stream';
+export const NAVPOP = '/pop';

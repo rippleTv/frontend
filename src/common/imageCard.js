@@ -11,7 +11,7 @@ class ImageCard extends Component {
                     <div className="onHover--header">
                         {this.props.imageTitle}
                         <div className="div">
-                        <i class="fas fa-eye"> </i>
+                        <i className="fas fa-eye"> </i>
                             200 
                         </div>
                     </div>
@@ -22,11 +22,11 @@ class ImageCard extends Component {
                         </div>
 
                         <div className="onHover--stars">
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i className="far fa-star"></i>
+                            <i className="far fa-star"></i>
+                            <i className="far fa-star"></i>
+                            <i className="far fa-star"></i>
+                            <i className="far fa-star"></i>
                         </div>
                     </div>
 

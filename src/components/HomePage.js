@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Ticker from 'react-ticker';
 import headerpic from '../img/homehead.png';
 import end from '../img/homefooter.png';
@@ -45,14 +46,12 @@ class HomePage extends Component {
 				<div className="homepage--wrapper">
 					<NavBar giveClass="homepage--nav" />
 
-					<div className="homepage--head__content">
-						<h1>Nollywood Movies</h1>
-						<p className="firstP">
-							Enjoy varieties of amazing Nollywood movies
-						</p>
-						<p className="lastP">from top notch actors and superstars.</p>
-						<Button label="Watch Now" buttonType={true} />
-					</div>
+				<div className="homepage--head__content">
+					<h1>Nollywood Movies</h1>
+					<p className="firstP">Enjoy varieties of amazing Nollywood movies</p>
+					<p className="lastP">from top notch actors and superstars.</p>
+					<Button label="Watch Now" path="/movies" buttonType={true}/>
+				</div>
 
 					<div className="homepage--head__footer">
 						<div className="footer--icons">
@@ -72,10 +71,10 @@ class HomePage extends Component {
 						<h1>Top Actors</h1>
 						<p className="middle--firstP">Catch up with your favorite</p>
 						<p>Nollywood Stars</p>
-						<p className="middle--lastP">
-							on <span className="home--highlight">RIPPLE</span>
-						</p>
-						<Button label="Watch Now" giveClass="home--middle__button" />
+
+						<p className="middle--lastP">on <span className="home--highlight">RIPPLE</span></p>
+						<Button label="Watch Now" path="/series" giveClass="home--middle__button"/>
+
 					</div>
 				</div>
 				<div className="homepage--end">

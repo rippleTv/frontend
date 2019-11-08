@@ -2,7 +2,7 @@
 .landing-page {
 	margin: 0;
 	padding: 0;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 /* .landing-page .ticker img{
@@ -11,6 +11,7 @@
 } */
 /* ---------------------------------------------------LANDING-WRAPPER-STYLES --------------------------------------------*/
 .landing--wrapper {
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -25,6 +26,9 @@
 	opacity: var(--bg-opacity);
 }
 
+.tickerImage{
+	height: 100vh !important;
+}
 /*----------------------------------------------------LANDING-HEADER-STYLES ---------------------------------------------------------*/
 .landing--header {
 	display: flex;
@@ -115,12 +119,14 @@ button:hover,
 .far:hover {
 	cursor: pointer;
 }
+.fa-play-circle:focus,
+.fa-pause-circle:focus{
+	outline: hidden;
+}
 /* -------------------------------------------------------ALL-MEDIA-QUERIES--------------------------------------------------------- */
 
-@media only screen and (min-height: 600px) {
-	.ticker img {
-		height: 99.2vh;
-	}
+@media only screen and (min-height: 700px) {
+	
 }
 @media only screen and (max-width: 670px) {
 	.landing--body > h1 {

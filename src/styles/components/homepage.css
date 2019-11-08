@@ -166,6 +166,7 @@ color: #FFFFFF;
     .ticker__img{
         height: 65.7rem;
     }
+    
     .homepage--head__content{
         margin: 0 auto;
     }
@@ -176,7 +177,9 @@ color: #FFFFFF;
         font-style: normal;
         font-weight: 900;
         font-size: 3.1rem;
-        line-height: 2rem;
+        line-height: 2.7rem;
+        letter-spacing: 1.4px;
+        word-spacing: 1px;
         color: #FFFFFF;
         text-align: center;
     }
@@ -184,10 +187,11 @@ color: #FFFFFF;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         line-height: 1.3rem;;
         color: #FFFFFF;
         text-align: center;
+        letter-spacing: 1px;
         
     }
     .firstP{

@@ -21,6 +21,7 @@ import MoviesPage from './components/MoviesPage';
 import UserSection from './components/UserSection';
 import ListPage from './components/ListPage';
 import StreamingPage from './components/StreamingPage';
+import NavPop from './common/navPop'
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
 	<Route
@@ -56,6 +57,8 @@ function AppRouter() {
 				></Route>
 				<PrivateRoute path={ROUTES.HOMEPAGE} component={HomePage} />
 				<Route path={ROUTES.SERIESPAGE} component={SeriesPage}></Route>
+				<Route path={ROUTES.USER} component ={UserSection}></Route>
+				<Route path={ROUTES.NAVPOP} component={NavPop}></Route>
 				<PrivateRoute path={ROUTES.SUBSCRIPTION} component={SubscriptionPage} />
 				<PrivateRoute path={ROUTES.MOVIES} component={MoviesPage} />
 				<PrivateRoute path={ROUTES.ListPage} component={ListPage} />

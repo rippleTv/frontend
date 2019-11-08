@@ -3,6 +3,8 @@
 	flex-direction: column;
 	justify-content: center;
 	margin: 2rem 0rem;
+	z-index: 100;
+	mix-blend-mode: multiply;
 }
 .slider {
 	width: 100%;
@@ -15,7 +17,20 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	z-index: -1;
+
 }
+
+.generic--slider {
+	z-index: -1;
+	position: relative;
+}
+.slider{
+
+}
+
+
 .generic--slider > h1 {
 	font-family: Roboto;
 	font-style: normal;
@@ -24,6 +39,7 @@
 	line-height: 4.7rem;
 	text-align: start;
 	color: var(--yellow);
+	z-index: 0;
 }
 @media only screen and (max-width: 835px) {
 	.generic--slider > h1 {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import '../';
 
 const Button = props => {
@@ -13,7 +14,7 @@ const Button = props => {
 			}}
 			disabled={disabled}
 		>
-			{props.label}
+		<Link to={props.path}>{props.label}</Link>	
 		</button>
 	);
 };

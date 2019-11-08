@@ -35,6 +35,8 @@ body {
 @import 'components/streamingpage.css';
 @import 'components/spinner.css';
 @import 'components/navpop.css';
+@import 'components/verifyscreen.css';
+@import 'components/confirmscreen.css';
 
 /* Reusable classes
 ========================================================================== */

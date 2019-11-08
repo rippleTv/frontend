@@ -16,6 +16,8 @@ import UserSection from './components/UserSection';
 import ListPage from './components/ListPage';
 import StreamingPage from './components/StreamingPage';
 import NavPop from './common/navPop'
+import VerifyScreen from './components/VerifyScreen';
+import ConfirmScreen from './components/ConfirmScreen';
 
 
 function AppRouter() {
@@ -43,6 +45,8 @@ function AppRouter() {
 				<Route path={ROUTES.ListPage} component={ListPage}></Route>
 				<Route path={ROUTES.STREAM} component={StreamingPage}></Route>
 				<Route path={ROUTES.NAVPOP} component={NavPop}></Route>
+				<Route path={ROUTES.VERIFY} component={VerifyScreen}></Route>
+				<Route path={ROUTES.CONFIRM} component={ConfirmScreen}></Route>
 			</Switch>
 		</Router>
 	);

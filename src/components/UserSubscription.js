@@ -24,19 +24,19 @@ class UserSub
                     <div className="subscriptionpage--userbottom">
                         <h3>Subscriptions</h3>
 
-                        <div className="sub--button">
-                            <span className="sub--button__first">Basic</span> 
-                            <span className="sub--button__second">$7.99 per month</span>
+                        <div className="subuser--button">
+                            <span className="subuser--button__first">Basic</span> 
+                            <span className="subuser--button__second">$7.99 per month</span>
                         </div>
 
-                        <div className="sub--button sub--active">
-                            <span className="sub--button__first">Standard</span> 
-                            <span className="sub--button__second ">$9.99 per month</span>
+                        <div className="subuser--button subuser--active">
+                            <span className="subuser--button__first">Standard</span> 
+                            <span className="subuser--button__second ">$9.99 per month</span>
                         </div>
 
-                        <div className="sub--button">
-                            <span className="sub--button__first">Premium</span> 
-                            <span className="sub--button__second">$11.99 per month</span>
+                        <div className="subuser--button">
+                            <span className="subuser--button__first">Premium</span> 
+                            <span className="subuser--button__second">$11.99 per month</span>
                         </div>
                     </div>
             </React.Fragment>

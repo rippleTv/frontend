@@ -70,7 +70,7 @@
     align-items: center;
    
 }
-.sub--button{
+.subuser--button{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -80,7 +80,7 @@
     border-radius: 10px;
     margin: 1rem 0rem;
 }
-.sub--button__first{
+.subuser--button__first{
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -90,7 +90,7 @@
     color: #FFFFFF;
 
 }
-.sub--button__second{
+.subuser--button__second{
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -99,7 +99,7 @@
     text-align: center;
     color: #FFFFFF;
 }
-.sub--active{
+.subuser--active{
     background: var(--yellow);
 }
 

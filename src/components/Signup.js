@@ -3,7 +3,7 @@ import ripple from '../img/Ripple-Logo.png';
 import googleIcon from '../img/google-icon.svg';
 import * as ROUTES from '../routes';
 
-import Validate from '../utils/validate';
+import { validate, validateSignup } from '../utils/validate';
 import AuthService from '../utils/AuthService';
 
 const INITIAL_STATE = {
@@ -30,6 +30,12 @@ class Signup extends Component {
 	handleFormSubmit = e => {
 		e.preventDefault();
 		const { fields } = this.state;
+
+		const errors = validateSignup(fields);
+		if (errors) {
+			this.setState({ errors });
+			return;
+		}
 		this.setState({ loading: true, disabled: true });
 
 		AuthService.signup(fields)
@@ -66,7 +72,7 @@ class Signup extends Component {
 		} = this.state;
 		const value = e.target.value;
 		const name = e.target.name;
-		const error = Validate(value, name);
+		const error = validate(value, name);
 
 		errors[name] = error ? error : undefined;
 
@@ -81,10 +87,10 @@ class Signup extends Component {
 		const { fields, errors, error, checked, loading, disabled } = this.state;
 		const { name, email, password, password2 } = fields;
 
-		const errorExists = Object.keys(errors).filter(error => error);
+		const errorExists = Object.keys(errors).filter(error => errors[error]);
 		const invalid =
 			disabled ||
-			!errorExists.length ||
+			errorExists.length ||
 			name === '' ||
 			email === '' ||
 			password === '' ||

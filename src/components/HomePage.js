@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Ticker from 'react-ticker';
-import headerpic from '../img/homehead.png'
-import end from '../img/homefooter.png'
+import headerpic from '../img/homehead.png';
+import end from '../img/homefooter.png';
 import NavBar from './../common/navbar';
 import Button from '../common/button';
-
-
 
 class HomePage extends Component {
 	state = {
@@ -26,11 +24,10 @@ class HomePage extends Component {
 		}
 		this.setState({ move, sliderAnim: anim });
 	};
-	render() {
-		
-		return ( 
-			<div className="homepage">
 
+	render() {
+		return (
+			<div className="homepage">
 				<Ticker speed={5} mode="chain" move={this.state.move} height={657}>
 					{({ index }) => (
 						<>
@@ -47,7 +44,7 @@ class HomePage extends Component {
 				</Ticker>
 
 				<div className="homepage--wrapper">
-				<NavBar giveClass="homepage--nav"/>
+					<NavBar giveClass="homepage--nav" />
 
 				<div className="homepage--head__content">
 					<h1>Nollywood Movies</h1>
@@ -56,7 +53,7 @@ class HomePage extends Component {
 					<Button label="Watch Now" path="/movies" buttonType={true}/>
 				</div>
 
-				<div className="homepage--head__footer">
+					<div className="homepage--head__footer">
 						<div className="footer--icons">
 							<i className="fab fa-instagram"></i>
 							<i className="fab fa-facebook"></i>
@@ -67,16 +64,17 @@ class HomePage extends Component {
 							onClick={this.handleClick}
 						></i>
 					</div>
-
 				</div>
 
 				<div className="homepage--middle">
 					<div className="homepage--middle__content">
 						<h1>Top Actors</h1>
-						<p  className="middle--firstP">Catch up with your favorite</p>
+						<p className="middle--firstP">Catch up with your favorite</p>
 						<p>Nollywood Stars</p>
+
 						<p className="middle--lastP">on <span className="home--highlight">RIPPLE</span></p>
 						<Button label="Watch Now" path="/series" giveClass="home--middle__button"/>
+
 					</div>
 				</div>
 				<div className="homepage--end">
@@ -86,17 +84,13 @@ class HomePage extends Component {
 						<p>series on your phone, tablet, laptop and TV</p>
 						<p>without paying more.</p>
 					</div>
-					<img src={end} alt="Tv-Screens"/>
+					<img src={end} alt="Tv-Screens" />
 				</div>
 
-				<div className="home--footer">
-
-				</div>
-				
+				<div className="home--footer"></div>
 			</div>
-		 );
+		);
 	}
 }
 
- 
 export default HomePage;

@@ -7,7 +7,7 @@ import VideoDetails from './video/video-details';
 import ImageSlider from '../common/imageSlider';
 
 const manifestUri =
-	'//storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd';
+	'https://bitmovin-a.akamaihd.net/content/playhouse-vr/mpds/105560.mpd';
 
 class StreamingPage extends Component {
 	render() {

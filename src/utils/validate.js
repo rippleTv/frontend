@@ -15,7 +15,7 @@ function isValidEmail(email) {
 	return true;
 }
 
-export default function validate(value, type, password = '') {
+function validate(value, type) {
 	if (!value) return `${type} is required`;
 	if (type === 'name') {
 		const valid = isValidString(value);
@@ -38,3 +38,27 @@ export default function validate(value, type, password = '') {
 
 	return null;
 }
+
+function validateLogin({ email, password }) {
+	const errors = {};
+	const invalidEmail = validate(email, 'email');
+	const invalidPassword = validate(password, 'password');
+	if (invalidPassword) errors.password = invalidPassword;
+	if (invalidEmail) errors.email = invalidPassword;
+	return Object.keys(errors).length ? errors : null;
+}
+
+function validateSignup({ email, name, password }) {
+	const errors = {};
+	const invalidEmail = validate(email, 'email');
+	const invalidPassword = validate(password, 'password');
+	const invalidName = validate(name, 'name');
+	if (invalidPassword) errors.password = invalidPassword;
+	if (invalidEmail) errors.email = invalidPassword;
+	if (invalidName) errors.name = invalidName;
+	return Object.keys(errors).length ? errors : null;
+}
+
+exports.validate = validate;
+exports.validateLogin = validateLogin;
+exports.validateSignup = validateSignup;

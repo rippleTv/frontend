@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as ROUTES from '../routes';
 
+import ripple from '../img/Ripple-Logo.png';
 import { validate, validateLogin } from '../utils/validate';
 import AuthService from '../utils/AuthService';
 
@@ -79,7 +80,7 @@ class Login extends Component {
 		return (
 			<div className="login">
 				<div className="login_aside">
-					<img src="logo1.png" alt="logo"></img>
+					<img src={ripple} alt="logo"></img>
 					<div className="login_aside_body">
 						<h2>Watch Great Nollywood movies</h2>
 						<p>Thousands of Movies. Watch on any device</p>

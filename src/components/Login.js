@@ -82,7 +82,7 @@ class Login extends Component {
 					<img src="logo1.png" alt="logo"></img>
 					<div className="login_aside_body">
 						<h2>Watch Great Nollywood movies</h2>
-						<h3>Thousands of Movies. Watch on any device</h3>
+						<p>Thousands of Movies. Watch on any device</p>
 						<button className="signButton" onClick={this.routeToSignup}>
 							SIGN UP
 						</button>

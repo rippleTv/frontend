@@ -16,7 +16,7 @@ class ConfirmScreen extends Component {
                         <h1>Congratulations!</h1>
                         <img src={confirmImg} alt=""/>
                     
-                    <Button  label="START YOUR FREE MONTH" path="/subscription" buttonType={true} />
+                    <Button  label="START YOUR FREE MONTH" path="/signin" buttonType={true} />
                 </div>
 
             </div>

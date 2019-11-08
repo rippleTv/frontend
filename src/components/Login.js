@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as ROUTES from '../routes';
 
-import Validate from '../utils/validate';
+import { validate, validateLogin } from '../utils/validate';
 import AuthService from '../utils/AuthService';
 
 const INTIAL_STATE = {
@@ -21,12 +21,17 @@ class Login extends Component {
 	};
 
 	handleBlur = e => {
+		this.validateFormInput(e);
+	};
+
+	validateFormInput = e => {
 		const { errors } = this.state;
+
 		const value = e.target.value;
 		const name = e.target.name;
-		const error = Validate(value, name);
+		const error = validate(value, name);
 
-		errors[name] = error ? error : undefined;
+		errors[name] = error ? error : null;
 
 		this.setState({ errors });
 	};
@@ -40,25 +45,37 @@ class Login extends Component {
 
 		const { email, password } = this.state;
 		const user = { email, password };
+		const errors = validateLogin(user);
+		if (errors) {
+			this.setState({ errors, disabled: true });
+			return;
+		}
 		this.setState({ loading: true, disabled: true });
 
 		AuthService.login(user)
 			.then(response => {
+				const { from } = this.props.location.state || {
+					from: { pathname: ROUTES.HOMEPAGE }
+				};
 				AuthService.setToken(response.data.token);
-				this.props.history.push(ROUTES.HOMEPAGE);
+				this.props.history.replace(from);
 				this.setState({ ...INTIAL_STATE });
-				// this.
 			})
 			.catch(error => {
-				this.setState({ error: error.message });
+				this.setState({
+					error: error.message,
+					loading: false,
+					disabled: false
+				});
 			});
 	};
 	render() {
 		const { email, password, errors, loading, disabled, error } = this.state;
 
-		const errorExists = Object.keys(errors).filter(error => error);
+		const errorExists = Object.keys(errors).filter(error => errors[error]);
+
 		const invalid =
-			disabled || !errorExists.length || email === '' || password === '';
+			disabled || errorExists.length || email === '' || password === '';
 		return (
 			<div className="login">
 				<div className="login_aside">

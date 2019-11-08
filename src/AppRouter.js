@@ -1,8 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Redirect
+} from 'react-router-dom';
 import { StripeProvider, Elements } from 'react-stripe-elements';
 
 import * as ROUTES from './routes';
+import AuthService from './utils/AuthService';
 
 import Login from './components/Login';
 import LandingPage from './components/LandingPage';
@@ -17,6 +23,20 @@ import ListPage from './components/ListPage';
 import StreamingPage from './components/StreamingPage';
 import NavPop from './common/navPop'
 
+const PrivateRoute = ({ component: Component, ...rest }) => (
+	<Route
+		{...rest}
+		render={props =>
+			AuthService.isAuthenticated() ? (
+				<Component {...props} />
+			) : (
+				<Redirect
+					to={{ pathname: ROUTES.SIGN_IN, state: { from: props.location } }}
+				/>
+			)
+		}
+	></Route>
+);
 
 function AppRouter() {
 	return (
@@ -35,14 +55,15 @@ function AppRouter() {
 						</StripeProvider>
 					)}
 				></Route>
-				<Route path={ROUTES.HOMEPAGE} component={HomePage}></Route>
+				<PrivateRoute path={ROUTES.HOMEPAGE} component={HomePage} />
 				<Route path={ROUTES.SERIESPAGE} component={SeriesPage}></Route>
-				<Route path={ROUTES.SUBSCRIPTION} component={SubscriptionPage}></Route>
-				<Route path={ROUTES.MOVIES} component={MoviesPage}></Route>
 				<Route path={ROUTES.USER} component ={UserSection}></Route>
-				<Route path={ROUTES.ListPage} component={ListPage}></Route>
-				<Route path={ROUTES.STREAM} component={StreamingPage}></Route>
 				<Route path={ROUTES.NAVPOP} component={NavPop}></Route>
+				<PrivateRoute path={ROUTES.SUBSCRIPTION} component={SubscriptionPage} />
+				<PrivateRoute path={ROUTES.MOVIES} component={MoviesPage} />
+				<PrivateRoute path={ROUTES.ListPage} component={ListPage} />
+				<PrivateRoute path={ROUTES.STREAM} component={StreamingPage} />
+				<PrivateRoute path={ROUTES.USER} component={UserSection} />
 			</Switch>
 		</Router>
 	);

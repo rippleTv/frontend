@@ -13,7 +13,9 @@ export default class player extends Component {
 		progress: 0,
 		fullscreen: false,
 		showControls: false,
-		buffering: false
+		buffering: false,
+		currentTime: 0,
+		duration: 0
 	};
 
 	componentDidMount() {
@@ -45,7 +47,9 @@ export default class player extends Component {
 			await this.player.load(this.props.src);
 			// This runs if the asynchronous load is successful.
 			console.log('Video Loaded');
-			this.setState({ showControls: true });
+			this.setState({ showControls: true, duration: videoElem.duration });
+
+			console.log(videoElem.duration);
 		} catch (error) {
 			this.onError(error);
 		}
@@ -116,8 +120,10 @@ export default class player extends Component {
 
 	handleVideoTimeUpdate = () => {
 		const videoElem = this.refs.video;
+		console.log(videoElem.duration);
+		console.log(videoElem.currentTime);
 		const percent = (videoElem.currentTime / videoElem.duration) * 100;
-		this.setState({ progress: percent });
+		this.setState({ progress: percent, currentTime: videoElem.currentTime });
 	};
 
 	toggleMute = () => {
@@ -140,7 +146,9 @@ export default class player extends Component {
 			progress,
 			muted,
 			showControls,
-			buffering
+			buffering,
+			currentTime,
+			duration
 		} = this.state;
 		return (
 			<section className="video-player">
@@ -155,7 +163,7 @@ export default class player extends Component {
 				)}
 				<video
 					ref="video"
-					poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
+					poster="https://res.cloudinary.com/dqfn8m6ti/image/upload/v1573114594/black-1072366_640.jpg"
 					onTimeUpdate={this.handleVideoTimeUpdate}
 				></video>
 
@@ -170,6 +178,8 @@ export default class player extends Component {
 						handleFullScreenChange={this.handleFullScreenChange}
 						handleTogglePlay={this.handleTogglePlay}
 						handleToggleMute={this.toggleMute}
+						currentTime={currentTime}
+						duration={duration}
 					/>
 				)}
 			</section>

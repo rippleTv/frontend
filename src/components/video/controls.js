@@ -1,5 +1,6 @@
 import React from 'react';
 import { Play, Pause, VolumeUp, Muted, Fullscreen } from '../../common/svg';
+import formatTime from '../../utils/formatTime';
 
 export default function Controls({
 	paused,
@@ -10,14 +11,12 @@ export default function Controls({
 	handleVolumeChange,
 	handleFullScreenChange,
 	handleTogglePlay,
-	handleToggleMute
+	handleToggleMute,
+	currentTime,
+	duration
 }) {
 	return (
 		<section class="controls">
-			<button type="button" onClick={handleTogglePlay}>
-				{paused ? <Play /> : <Pause />}
-			</button>
-
 			<div class="progress">
 				<progress
 					value={progress || 0}
@@ -26,25 +25,34 @@ export default function Controls({
 					onChange={handleSeek}
 					onClick={handleSeek}
 				></progress>
+				<span className="duration">
+					{formatTime(currentTime)} / {formatTime(duration)}
+				</span>
 			</div>
 
-			<button onClick={handleToggleMute}>
-				{muted ? <Muted /> : <VolumeUp />}
-			</button>
+			<section className="control__buttons">
+				<button type="button" onClick={handleTogglePlay}>
+					{paused ? <Pause /> : <Play />}
+				</button>
+				<div className="space"></div>
+				<button onClick={handleToggleMute}>
+					{muted ? <Muted /> : <VolumeUp />}
+				</button>
 
-			<input
-				type="range"
-				title="volume"
-				onChange={handleVolumeChange}
-				min="0"
-				max="1"
-				step="0.1"
-				value={volume}
-			/>
+				<input
+					type="range"
+					title="volume"
+					onChange={handleVolumeChange}
+					min="0"
+					max="1"
+					step="0.1"
+					value={volume}
+				/>
 
-			<button onClick={handleFullScreenChange}>
-				<Fullscreen />
-			</button>
+				<button onClick={handleFullScreenChange}>
+					<Fullscreen />
+				</button>
+			</section>
 		</section>
 	);
 }

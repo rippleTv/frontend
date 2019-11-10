@@ -132,7 +132,16 @@ border-radius: 1.0rem;
 		align-items: center;
 		flex-direction: column;
 	}
-	.card {
+
+	.subscription__card {
 		margin-bottom: 7rem;
 	}
+}
+
+@media only screen and (max-width: 420px) {
+	.mid__text>h1 {
+		font-size: 1.7rem;
+		width: 30.0rem;
+	}
+	
 }

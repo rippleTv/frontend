@@ -7,12 +7,18 @@ import UserSub from './UserSubscription';
 
 class UserSection extends Component {
     state = { 
-        bodyStatus: "profile"
+        bodyStatus: "profile",
+        showModal: false
      }
 
     handleClick = (message) => {
         this.setState({
             bodyStatus: message
+        })
+    }
+    handleModal = () => {
+        this.setState({
+            showModal: !this.state.showModal
         })
     }
     render() { 
@@ -23,7 +29,7 @@ class UserSection extends Component {
                 mainSeg=<UserProfile />
             break;
             case "subscription":
-                mainSeg=<UserSub />
+                mainSeg=<UserSub handleModal={this.handleModal}/>
             break;
             case "password":
                 mainSeg=<UserPassword />
@@ -41,6 +47,19 @@ class UserSection extends Component {
                             mainSeg
                         }
                     </div>
+
+                   { this.state.showModal && <div className="user--overlay">
+                        <div className="user--cancelmodal">
+                            <p>Are You Sure You Want To</p>
+                            <p>Cancel Your Subscription?</p>
+                            <div className="cancelModalFooter">
+                                <button className="modal--button first--modal__button" onClick={this.handleModal}><i className="fas fa-check"></i></button>
+                                <button className="modal--button second--modal__button" onClick={this.handleModal}><i className="fas fa-times"></i></button>
+                            </div>
+                            
+                        </div>
+                    </div>}
+    
                     
                     
                 </div>

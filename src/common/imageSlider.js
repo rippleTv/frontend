@@ -67,7 +67,8 @@ ImageSlider.defaultProps = {
 		{ name: img2 },
 		{ name: img3 },
 		{ name: img4 },
-		{ name: img1 }
+		{ name: img1 },
+		
 	],
 	sliderTitle: 'Coming Soon'
 };

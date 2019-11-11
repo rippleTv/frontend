@@ -32,7 +32,7 @@ class DashNav extends Component {
             <React.Fragment>
                 <div className={`dash--nav ${this.props.giveClass}`} >
                     <ul className="dash--nav__list">
-                        <li className={`dash--nav__item dashy ${isDashboardActive}`} onClick={() => this.props.onClick("profile")}><img src={dlogo} width="29" height="20" alt=""/> Dashboard</li>
+                        <li className={`dash--nav__item ${isDashboardActive}`} onClick={() => this.props.onClick("profile")}><img src={dlogo} width="29" height="20" alt=""/> Dashboard</li>
                         <li className={`dash--nav__item ${isSubscriptionActive}`} onClick={() => this.props.onClick("subscription")}><img src={mlogo} width="21" height="20" alt=""/> Manage Subscription</li>
                         <li className={`dash--nav__item ${isPasswordActive}`} onClick={() => this.props.onClick("password")}><img src={plogo} width="16" height="21" alt=""/> Change Password</li>
                     </ul>

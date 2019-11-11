@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 
 class ImageCard extends Component {
     state = {  }
     render() { 
         return ( 
-            <div className={`card ${this.props.giveClass}`}  >
+            <Link to="/stream"><div className={`card ${this.props.giveClass}`}  >
                 <img src={this.props.image} alt=""/>
                 <div className="onHover--card">
                     <div className="onHover--header">
@@ -32,6 +33,7 @@ class ImageCard extends Component {
 
                 </div>
             </div>
+            </Link>
 
          );
     }

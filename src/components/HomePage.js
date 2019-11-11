@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Ticker from 'react-ticker';
 import headerpic from '../img/homehead.png';
 import end from '../img/homefooter.png';

@@ -24,6 +24,7 @@ import StreamingPage from './components/StreamingPage';
 import NavPop from './common/navPop'
 import VerifyScreen from './components/VerifyScreen';
 import ConfirmScreen from './components/ConfirmScreen';
+import Admin from './components/Admin';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
 	<Route
@@ -68,6 +69,7 @@ function AppRouter() {
 				<PrivateRoute path={ROUTES.ListPage} component={ListPage} />
 				<PrivateRoute path={ROUTES.STREAM} component={StreamingPage} />
 				<PrivateRoute path={ROUTES.USER} component={UserSection} />
+				<Route path={ROUTES.ADMIN} component={Admin}></Route>
 			</Switch>
 		</Router>
 	);

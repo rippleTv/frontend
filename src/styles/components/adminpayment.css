@@ -1,0 +1,46 @@
+.adminpayment--wrapper{
+    width: 100%;
+}
+.adminpayment--table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0rem auto;
+
+}
+.adminpayment--table thead th{
+    text-align: center;
+    border: 1px solid #C4C4C4;
+    background: #212121;
+    padding: 2rem 3rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    color: #F9B109;
+  
+}
+.adminpayment--table thead th:first-child{
+    border-left: none;
+}
+.adminpayment--table thead th:last-child{
+    border-right: none;
+}
+.adminpayment--table tbody tr{
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 0rem;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    
+}
+.adminpayment--table tbody td{
+    border-right: 1px solid #C4C4C4;
+    padding: 1.999rem 2rem;
+}
+.adminpayment--table tbody td:last-child{
+    border-right: none;
+}

@@ -1,0 +1,163 @@
+/* ADMIN--UPLOAD--STYLES */
+.adminupload--wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.adminupload--wrapper>h3{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 6rem 0rem;
+}
+.adminupload--form__section{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.adminupload--form1{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.adminupload--form1>label{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #F9B109;
+    padding: 2rem 0rem 1rem;
+}
+.adminupload--form1>input, .textarea{
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 3rem;
+    background: #D3D3D3;
+}
+.textbox{
+    height: 3.5rem;
+}
+.textarea{
+    height: 20rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #3F3F3F;
+    background: #D3D3D3;
+    
+}
+
+.adminupload--form2{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: space-evenly; */
+}
+.adminupload--form2>label{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #F9B109;
+    padding: 2rem 0rem 1rem;
+}
+.adminupload--form2 input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    /*n alternative to pointer-events, compatible with all browsers, just make it impossible to find */
+    width: 1px;
+    height: 1px;
+  }
+  .adminupload--form2 input[type="file"] + label {
+        padding: 10px 15px;
+        background: #F9B109;
+        box-shadow: -2px 0px 3px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: #FFFFFF;
+  }
+  input[type="file"]+ label:hover{
+      cursor: pointer;
+  }
+
+  .file--browser{
+      width: 80%;
+      height: 3.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    background: #D3D3D3;
+    border-radius: 10px;
+  }
+  .file--browser__text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #3F3F3F;
+    margin-left: 3rem;
+  }
+
+  .upload--btn{
+    width: 40%;
+    height: 3.5rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #F9B109;
+    border: none;
+    border-radius: 10px;
+    margin-top: auto;
+  }
+
+  #adminupload--dropdown{
+        width: 80%;
+        height: 3.4rem;
+        background: #D3D3D3;
+        border-radius: 10px;
+        padding: 0rem 2rem;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        text-align: center;
+        color: #3F3F3F;
+  }
+  #adminupload--dropdown:focus{
+      outline: none;
+  }
+  /* @media only screen and ( max-width: 700px){
+    .adminupload--form__section{
+        flex-direction: column;
+        align-items: center;
+    }
+  } */

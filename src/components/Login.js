@@ -5,6 +5,8 @@ import ripple from '../img/Ripple-Logo.png';
 import { validate, validateLogin } from '../utils/validate';
 import AuthService from '../utils/AuthService';
 
+import { withState } from '../context';
+
 const INTIAL_STATE = {
 	email: '',
 	password: '',
@@ -58,11 +60,13 @@ class Login extends Component {
 				const { from } = this.props.location.state || {
 					from: { pathname: ROUTES.HOMEPAGE }
 				};
-				AuthService.setToken(response.data.token);
-				this.props.history.replace(from);
 				this.setState({ ...INTIAL_STATE });
+				AuthService.setToken(response.data.token);
+				this.props.updateUserData();
+				this.props.history.replace(from);
 			})
 			.catch(error => {
+				console.error(error);
 				this.setState({
 					error: error.message,
 					loading: false,
@@ -71,6 +75,7 @@ class Login extends Component {
 			});
 	};
 	render() {
+		console.log(this.props);
 		const { email, password, errors, loading, disabled, error } = this.state;
 
 		const errorExists = Object.keys(errors).filter(error => errors[error]);
@@ -137,4 +142,4 @@ class Login extends Component {
 	}
 }
 
-export default Login;
+export default withState(Login);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import '../';
 
 const Button = props => {
@@ -14,13 +14,14 @@ const Button = props => {
 			}}
 			disabled={disabled}
 		>
-		<Link to={props.path}>{props.label}</Link>	
+			<Link to={props.path}>{props.label}</Link>
 		</button>
 	);
 };
 
 Button.defaultProps = {
 	width: '183px',
-	height: '40px'
+	height: '40px',
+	path: ''
 };
 export default Button;

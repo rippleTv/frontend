@@ -1,6 +1,9 @@
 const API_URL = process.env.REACT_APP_API_URL;
 
 class AuthService {
+	constructor() {
+		this.user = null;
+	}
 	// performs api calls sending the required authentication headers
 	fetch(url, options) {
 		const headers = {
@@ -67,6 +70,16 @@ class AuthService {
 	// Clear user token and profile data from localStorage
 	logout() {
 		localStorage.removeItem('token');
+	}
+
+	//get user details
+	getUserData() {
+		return this.fetch(`${API_URL}/user/account`);
+	}
+
+	//get all movies
+	getMovies() {
+		return this.fetch(`${API_URL}/movies`);
 	}
 }
 

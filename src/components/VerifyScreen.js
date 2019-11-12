@@ -17,7 +17,7 @@ class VerifyScreen extends Component {
                     <img src={verifyImg} alt=""/>
                     <p className="verify--firstP">You are almost there, We just you a confirmation mail</p>
                     <p className="verify--lastP">please kindly verify the mail</p>
-                    <Button  label="VERIFY EMAIL" path="/confirm" buttonType={true} />
+                    <Button  label="LOGIN" path="/signin" buttonType={true} />
                 </div>
 
             </div>

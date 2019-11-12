@@ -56,7 +56,7 @@
     overflow-y: hidden;
 }
 .subscriptionpage--userbottom>h3{
-    margin-right: 189px;
+    margin-right: 215px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -79,6 +79,12 @@
     background: #C4C4C4;
     border-radius: 10px;
     margin: 1rem 0rem;
+    transition: transform 0.3s ease-in-out;
+}
+.subuser--button:hover{
+    background: var(--yellow);
+    transform: scale(1.04);
+
 }
 .subuser--button__first{
     font-family: Roboto;
@@ -102,6 +108,31 @@
 .subuser--active{
     background: var(--yellow);
 }
+.subuser--section{
+    display: flex;
+    align-items: center;
+}
+.subuser--cancel{
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color:  var(--yellow);
+    border: 2px solid #F9B109;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    transition: transform 0.5s ease-in-out ;
+}
+.subuser--cancel:hover{
+   opacity: 1;
+   transform: scale(1.05)
+}
 
 /* -----------------------------------------------------------ALL-MEDIA-QUERIES---------------------------------------------------------------- */
 
@@ -122,15 +153,15 @@
         margin-right: 159px;
         font-size: 1rem;
     }
-    .sub--button{
+    .subuser--button{
         width: 15rem;
-        height: 3.5rem
+        height: 5rem
     }
-    .sub--button__first{
+    .subuser--button__first{
         font-size: 0.9rem;
        
     }
-    .sub--button__second{
+    .subuser--button__second{
         font-size: 0.7rem;
         letter-spacing: 1px;
     }
@@ -141,5 +172,12 @@
         width: 20px;
         font-size: 10px;
         line-height: 10px;
+    }
+    .subuser--cancel{
+        width: 20px;
+        height: 20px;
+        font-size: 1rem;
+        line-height: 1rem;
+        border-radius: 5px;
     }
 }

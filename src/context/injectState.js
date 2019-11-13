@@ -34,7 +34,6 @@ const injectState = Component => {
     getUserData = async () => {
       const response = await AuthService.getUserData();
       const { data } = await AuthService.getPlans();
-      console.log(response.data);
       this.setState({ user: response.data, plans: data });
     };
 

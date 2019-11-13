@@ -1,10 +1,11 @@
 .login {
 	display: flex;
 	justify-content: space-around;
-	align-items: flex-start;
 	font: #ffffff;
 	min-height: 100vh;
-	background: url('../../img/Background.png') repeat;
+	width: 100%;
+	background: url('../../img/Background.png') no-repeat;
+	background-size:cover;
 }
 
 .login > img {
@@ -15,7 +16,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: baseline;
-	width: 40rem;
+	width: 40%;
 	font-family: Roboto;
 	height: 80vh;
 }
@@ -46,7 +47,7 @@
 	line-height: 5.9rem;
 }
 
-.login_aside_body > h3 {
+.login_aside_body > p {
 	display: flex;
 	margin: 2rem 0rem;
 	padding: 0rem;
@@ -93,28 +94,21 @@
 	width: 44.2rem;
 	height: 76vh;
 	background: #ffffff;
-	border-radius: 1rem;
+	border-radius: 1.0rem;
 	color: black;
 	margin: 7rem 0rem;
 }
 
 .google {
-	display: flex;
-	justify-content: center;
-	width: 27.3rem;
-	height: 4rem;
+	width: 60%;
+	height: 40px;
 	background: #ffffff;
-	box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.25);
-	border-radius: 1rem;
-	padding: 0.5rem;
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 1.2rem;
-	line-height: 2.2rem;
-	text-transform: uppercase;
-	text-align: center;
-	color: #3f3f3f;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
 	border: none;
 }
 
@@ -128,11 +122,11 @@
 	align-items: center;
 	margin: 4.2rem 0 3rem 0;
 	font-size: 1.2rem;
-	width: 80%;
+	width: 70%;
 }
 
 .middleman > hr {
-	width: 13.5rem;
+	width: 11.5rem;
 	height: 0.01rem;
 	border: 0.05rem solid #858585;
 	background: #858585;
@@ -178,32 +172,120 @@
 	margin-top: 5rem;
 }
 /* MEDIA QUERIES */
-@media only screen and (max-width: 900px) {
+ @media only screen and (max-width: 900px)  {
 	.login {
 		flex-direction: column;
 		align-items: center;
 	}
+
 	.login_aside {
 		height: 50vh;
-		width: 80%;
+		display: flex;
+		align-items: center;
 	}
+
+	.login_aside > img {
+		display:flex;
+		margin-top: 4.2rem;
+		width: 13.6rem;
+		height: 3.6rem;
+		margin-right: 10px;
+		/* align-self: flex-start; */
+	}
+
 	.login_aside_body {
-		align-self: center;
+		width: 100%;
 		margin-top: 5rem;
+		width: 100%;
+		
 	}
+
 	.login_aside_body > h2 {
 		font-size: 3rem;
 		line-height: 2.9rem;
 	}
-	.login_aside_body > h3 {
-		font-size: 1.5rem;
-		padding: 0.5rem 0rem;
+
+	.login_aside_body > p {
+		font-size: 2rem;
+		padding: 1.5rem 0rem;
 	}
 	.signButton {
 		align-self: center;
 	}
-	.login_form {
-		margin: 5rem 0rem;
-		padding: 20px 0rem;
-	}
+
+	
 }
+
+ @media only screen and (max-width: 500px) {
+
+	.login_aside_body > h2 {
+		font-size: 2.0rem;
+		text-align: center;
+		width: 100%;
+	}
+
+	.login_aside_body > p {
+	
+		font-size: 1.55rem;
+		text-align: center;
+		width: 100%;
+		margin: 0.2rem;
+		
+	}
+
+	.login_form {
+		width: 40rem;
+		
+	}
+} 
+
+ @media only screen and (max-width: 400px){
+	.login_aside_body > h2 {
+		font-size: 2.2rem;
+		text-align: center;
+		width: 100%;
+	}
+
+	.login_aside_body > p {
+	
+		font-size: 1.5rem;
+		text-align: center;
+		width: 100%;
+		margin: 0.2rem;
+		
+	}
+
+	.login_form {
+		width: 30rem;
+		
+	}
+
+	.form_input > input {
+		border: 0rem;
+		outline: 0;
+		border-bottom: 0.1rem solid #858585;
+		width: 22.21rem;
+		height: 3.8rem;
+	}
+
+	.logButton {
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 18.8rem;
+		padding: 1rem 2rem;
+		height: 4rem;
+		background: #f9b109;
+		border-radius: 1rem;
+		font-size: 1.2rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #fff;
+		margin-left: 2.5rem;
+		margin-top: 5rem;
+	}
+
+
+} 
+

@@ -7,7 +7,7 @@ import VideoDetails from './video/video-details';
 import ImageSlider from '../common/imageSlider';
 
 const manifestUri =
-	'https://bitmovin-a.akamaihd.net/content/playhouse-vr/mpds/105560.mpd';
+	'https://res.cloudinary.com/dqfn8m6ti/video/upload/sp_hd/v1573129951/THE_WEDDING_PARTY.mpd';
 
 class StreamingPage extends Component {
 	render() {

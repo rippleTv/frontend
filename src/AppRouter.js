@@ -5,7 +5,9 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import { StripeProvider, Elements } from "react-stripe-elements";
+import { Elements } from "react-stripe-elements";
+
+import AsyncStripeProvider from "./components/AsyncStripeProvider";
 
 import * as ROUTES from "./routes";
 import AuthService from "./utils/AuthService";
@@ -45,8 +47,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const ProtectedRoute = ({ component: Component, ...rest }) => {
   return (
     <Consumer>
-      {({ user }) => {
-        if (user && !user.isSubscribed) {
+      {({ user, isSubscribed }) => {
+        if (user && !isSubscribed()) {
           return (
             <Redirect
               to={{
@@ -56,7 +58,7 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
           );
         }
 
-        return <PrivateRoute component={Component} {...rest} />;
+        return <PrivateRoute {...rest} component={Component} />;
       }}
     </Consumer>
   );
@@ -89,12 +91,12 @@ function AppRouter() {
 
         <PrivateRoute
           path={ROUTES.PAYMENT}
-          render={() => (
-            <StripeProvider apiKey="pk_test_UPzrXmje24b500GtGySA7bdx00ai4PpbFZ">
+          render={props => (
+            <AsyncStripeProvider apiKey="pk_test_UPzrXmje24b500GtGySA7bdx00ai4PpbFZ">
               <Elements>
-                <PaymentPage fontSize={16} />
+                <PaymentPage fontSize={16} {...props} />
               </Elements>
-            </StripeProvider>
+            </AsyncStripeProvider>
           )}
         />
         <PrivateRoute path={ROUTES.USER} component={UserSection} />

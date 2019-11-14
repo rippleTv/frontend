@@ -44,7 +44,8 @@ const createOptions = () => {
 class PaymentPage extends Component {
   state = {
     name: "",
-    error: ""
+    error: "",
+    loading: false
   };
 
   handleChange = e => {
@@ -56,29 +57,32 @@ class PaymentPage extends Component {
   handleSubmit = async e => {
     try {
       e.preventDefault();
+      this.setState({ loading: true });
       const { plan } = parse(this.props.location.search.slice(1));
       const { token, error } = await this.props.stripe.createToken({
         type: "card",
         name: this.state.name
       });
       if (error) {
-        return this.setState({ error: error.message });
+        return this.setState({ error: error.message, loading: false });
       }
       const { data } = await Auth.subscribeUser({
         token: token.id,
         plan_id: plan
       });
       this.props.updateUserData(data);
+      this.setState({ loading: false });
       this.props.history.replace(ROUTES.HOMEPAGE);
     } catch (error) {
       console.log(error);
+      this.setState({ error: error.message, loading: false });
     }
   };
   render() {
     if (this.props.isSubscribed()) {
       return <Redirect to={ROUTES.HOMEPAGE} />;
     }
-    const { error, name } = this.state;
+    const { error, name, loading } = this.state;
     const invalid = !name;
 
     return (
@@ -138,7 +142,9 @@ class PaymentPage extends Component {
                 alignItems: "center"
               }}
             >
-              <button>Continue</button>
+              <button>
+                {loading ? <span class="spinner"></span> : "Continue"}
+              </button>
             </div>
           </form>
         </div>

@@ -12,14 +12,14 @@ function ResetPassword() {
             <div className="reset__card">
                 <img src = {resetimage} alt="resetimage"></img>
                 <h1>Reset Password</h1>
-                <p>Enter an email address you use to sign in to</p>
+                <p>Enter your email address </p>
                 <form action="" className="reset__password__form">
                     <div className="reset__form__input">
                         <input type="email" placeholder="E-mail"></input>
                     </div>
-                   <div className="reset__button"> 
-                    <Button label={"Reset Password"} buttonType={true}></Button> 
-                    </div>
+                   
+                    <Button label={"Reset Password"} giveClass="reset__button" path="/resetconfirm" buttonType={true}></Button> 
+                    
                 </form>
             </div>
 

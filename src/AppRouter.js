@@ -25,6 +25,8 @@ import NavPop from "./common/navPop";
 import VerifyScreen from "./components/VerifyScreen";
 import ConfirmScreen from "./components/ConfirmScreen";
 import ResetPassword from "./components/ResetPassword";
+import ResetConfirm from "./components/ResetConfirm";
+import ResetSuccessful from "./components/ResetSuccessful";
 
 import { Consumer } from "./context";
 
@@ -86,6 +88,8 @@ function AppRouter() {
         <Route path={ROUTES.VERIFY} component={VerifyScreen}></Route>
         <Route path={ROUTES.CONFIRM} component={ConfirmScreen}></Route>
         <Route path={ROUTES.RESETPASSWORD} component={ResetPassword}></Route>
+        <Route path={ROUTES.RESETCONFIRM} component={ResetConfirm}></Route>
+        <Route path={ROUTES.RESETSUCCESSFUL} component={ResetSuccessful}></Route>
         <PublicRoute path={ROUTES.SIGN_IN} component={Login} />
         <PublicRoute path={ROUTES.SIGN_UP} component={Signup} />
 

@@ -13,4 +13,5 @@ export const NAVPOP = '/pop';
 export const CONFIRM = '/confirm';
 export const VERIFY = '/verify';
 export const RESETPASSWORD = '/resetpassword';
-
+export const RESETCONFIRM = '/resetconfirm';
+export const RESETSUCCESSFUL = '/resetsuccessful'

@@ -1,101 +1,94 @@
 import React, { Component } from 'react';
-import Drop from '../common/dropdown';
-import NavBar from './../common/navbar';
-import ImageSlider from'./../common/imageSlider';
-import img1 from "./../img/img.png";
-import img2 from "./../img/img1.png";
-import img3 from "./../img/img2.png";
-import img4 from "./../img/img3.png";
+import NavBar from '../common/navbar';
+import ImageSlider from '../common/imageSlider';
 
 
+class SeriePage extends Component {
+	state = {
+		displayGenre: false,
+		displayDate: false,
+		displayQuality: false
+	};
+
+	handleDrop = display => {
+		if (display === 'genre')
+			this.setState({
+				displayGenre: !this.state.displayGenre,
+				displayDate: false,
+				displayQuality: false
+			});
+
+		if (display === 'date')
+			this.setState({
+				displayGenre: false,
+				displayDate: !this.state.displayDate,
+				displayQuality: false
+			});
+
+		if (display === 'quality')
+			this.setState({
+				displayGenre: false,
+				displayDate: false,
+				displayQuality: !this.state.displayQuality
+			});
+	};
+
+	render() {
+		return (
+			<div className="moviespage">
+				<div className="moviespage--header">
+					<NavBar giveClass="seriespage--nav" />
+
+					<div className="homepage--head__content moviespage--head__content">
+						<h1>Nollywood Movies</h1>
+						<p className="firstP">
+							Enjoy varieties of amazing Nollywood movies
+						</p>
+						<p className="lastP">from top notch actors and superstars.</p>
+						
+					</div>
+				</div>
+
+				<div className="moviespage--middle">
+					<div className="moviespage--middle__titles">
+						<h3>Genre</h3>
+						<select name="" id="">
+							<option value="comedy">Comedy</option>
+							<option value="drama">Drama</option>
+							<option value="thriller">Thriller</option>
+						</select>
+					</div>
+					
+					<div className="moviespage--middle__titles">
+						<h3>Release Date</h3>
+						<select name="" id="">
+							<option value="2019">2019</option>
+							<option value="2018">2018</option>
+							<option value="2017">2017</option>
+						</select>
+					</div>
 
 
-class Movies extends Component {
-    state = { 
-        displayGenre: false,
-        displayDate: false,
-        displayQuality: false
-     }
+					<div className="moviespage--middle__titles">
+						<h3>Quality</h3>
+						<select name="" id="">
+							<option value="HD">HD</option>
+							<option value="webp">Webp</option>
+							<option value="avi">Avi</option>
+						</select>
+					</div>
+				</div>
 
-     handleDropDown = ( display ) => {
+				<ImageSlider sliderTitle="Coming Soon" />
+				<div className="movies--border"></div>
+				<ImageSlider sliderTitle="Popular" />
+				<div className="movies--border"></div>
+				<ImageSlider sliderTitle="Trending" />
 
-        if(display == "Date")
-            this.setState(prevState => ({ displayDate: !prevState.displayDate, displayGenre: false, displayQuality: false }))
-    
-            if(display == "Genre")
-            this.setState(prevState => ({ displayGenre: !prevState.displayGenre, displayDate: false, displayQuality: false }))
-    
-            if(display == "Quality")
-            this.setState(prevState => ({ displayQuality: !prevState.displayQuality, displayGenre: false, displayDate: false}))
-
-        
-       
-         
-     }
-
-    render() { 
-        return ( 
-            <section className="movies__page">
-    <div className="movies__header">
-        
-        <NavBar giveClass={"movie__navbar"} />
-    
-        <div className="header__text">
-        <h1>Nollywood Movies</h1>
-        <h3>Enjoy varieties of amazing nollywood movies
-            from top notch actors and superstars.
-        </h3>
-    
-        </div>
-    </div>
-    <div className="movies__body">
-        <div className="movies__filter">
-            <div className="category">
-                <h1>Genre</h1>
-                <div className="sub-category">
-                    Drama <i className="fas fa-angle-down" onClick={() => this.handleDropDown("Genre")}></i>
-
-                </div>
-                {this.state.displayGenre && <Drop contents={['Drama','Action','Horror','Thriller','Comedy']} />}
-            </div>
-            <div className="category">
-                <h1>Release Date</h1>
-                <div className="sub-category">
-                        2019 <i className="fas fa-angle-down" onClick={() => this.handleDropDown("Date")}></i>
-
-                    </div>
-                    {this.state.displayDate && <Drop contents={['2019','2018','2017']} />}
-                </div>
-                <div className="category">
-                <h1>Quality</h1>
-                <div className="sub-category">
-                        HD <i className="fas fa-angle-down" onClick={() => this.handleDropDown("Quality")}></i>
-
-                    </div>
-                    {this.state.displayQuality && <Drop contents={['HD', '1080p', '720p', '480p']} />}
-                </div>
-        </div>
-
-           
-
-    </div>
-    <div className="movies__slider">
-         <ImageSlider sliderTitle="Coming Soon" />
-         <div className="movies__border"></div>
-         <ImageSlider sliderTitle="Popular"/>
-         <div className="movies__border"></div>
-         <ImageSlider sliderTitle="Trending"/>
-         <div className="movies__border"></div>
-         
-    </div>
-   
-
-</section>
-         );
-    }
+				<div className="home--footer"></div>
+			</div>
+		);
+	}
 }
- 
-export default Movies;
 
-
- 
+export default SeriePage;

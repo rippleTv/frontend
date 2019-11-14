@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link } from 'react-router-dom'
 
 class Drop extends Component {
     
@@ -11,7 +12,7 @@ class Drop extends Component {
                     justifyContent: "space-between",
                     alignItems: "center"
                     }}>
-                    {this.props.contents.map(content =><div className="clickable drop--items">{content}</div> )}
+                    {this.props.contents.map(content =><div className="clickable drop--items" ><Link to={content.path}>{content.name}</Link></div> )}
                     
             </div>
             </div>

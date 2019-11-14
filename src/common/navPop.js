@@ -11,6 +11,7 @@ const NavPop = (props) => {
                     <li className="navpop--item"><NavLink to="/movies">Movies</NavLink></li>
                     <li className="navpop--item"><NavLink to="/series">Series</NavLink></li>
                     <li className="navpop--item"><NavLink to="/lists">My List</NavLink></li>
+                    <li className="navpop--item"><NavLink to="/">Log out</NavLink></li>
                 </ul>
         
         </div>

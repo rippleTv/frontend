@@ -1,5 +1,6 @@
 .generic--navbar {
 	display: flex;
+	position: relative;
 }
 .generic--navbar > img {
 	align-self: center;
@@ -48,6 +49,10 @@
 .fa-user-circle:hover{
 	cursor: pointer;
 }
+.nav--drop{
+	position: absolute;
+	right:5%;
+}
 
 /*------------------------------------------------------- GENERIC-NAVBAR__SM-STYLES------------------------------------------------ */
 .generic--navbar__sm {
@@ -71,6 +76,16 @@
 	display: none;
 }
 
+@media only screen and (max-width: 1100px){
+	.nav--drop{
+		right: 6.5%;
+	}
+}
+@media only screen and (max-width: 940px){
+	.nav--drop{
+		right: 7.5%;
+	}
+}
 @media only screen and (max-width: 820px) {
 	.generic--navbar {
 		display: none;

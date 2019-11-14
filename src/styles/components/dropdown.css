@@ -10,6 +10,7 @@
     width: 9rem;
     color: white;
    font-size: 1.1rem;
+   margin-top: 0.3rem
 }
 .drop--items{
     padding: 5px ;
@@ -18,3 +19,8 @@
     color: var(--yellow);
 }
 /*  */
+@media only screen and (max-width: 820px){
+    .dropdown{
+        display: none;
+    }
+}

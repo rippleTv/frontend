@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from '../common/navbar';
-import Button from '../common/button';
 import ImageSlider from '../common/imageSlider';
-import DropDown from '../common/dropdown';
+
 
 class SeriePage extends Component {
 	state = {

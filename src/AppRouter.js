@@ -1,83 +1,83 @@
-import React from "react";
+import React from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from "react-router-dom";
-import { Elements } from "react-stripe-elements";
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Redirect
+} from 'react-router-dom';
+import { Elements } from 'react-stripe-elements';
 
-import AsyncStripeProvider from "./components/AsyncStripeProvider";
+import AsyncStripeProvider from './components/AsyncStripeProvider';
 
-import * as ROUTES from "./routes";
-import AuthService from "./utils/AuthService";
+import * as ROUTES from './routes';
+import AuthService from './utils/AuthService';
 
-import Login from "./components/Login";
-import LandingPage from "./components/LandingPage";
-import Signup from "./components/Signup";
-import PaymentPage from "./components/payment";
-import HomePage from "./components/HomePage";
-import SeriesPage from "./components/SeriesPage";
-import SubscriptionPage from "./components/SubscriptionPage";
-import MoviesPage from "./components/MoviesPage";
-import UserSection from "./components/UserSection";
-import ListPage from "./components/ListPage";
-import StreamingPage from "./components/StreamingPage";
-import NavPop from "./common/navPop";
-import VerifyScreen from "./components/VerifyScreen";
-import ConfirmScreen from "./components/ConfirmScreen";
+import Login from './components/Login';
+import LandingPage from './components/LandingPage';
+import Signup from './components/Signup';
+import PaymentPage from './components/payment';
+import HomePage from './components/HomePage';
+import SeriesPage from './components/SeriesPage';
+import SubscriptionPage from './components/SubscriptionPage';
+import MoviesPage from './components/MoviesPage';
+import UserSection from './components/UserSection';
+import ListPage from './components/ListPage';
+import StreamingPage from './components/StreamingPage';
+import NavPop from './common/navPop';
+import VerifyScreen from './components/VerifyScreen';
+import ConfirmScreen from './components/ConfirmScreen';
 import Admin from './components/Admin';
 import MoviePreview from './components/MoviePreview';
 import SeriesPreview from './components/SeriesPreview';
 
-import { Consumer } from "./context";
+import { Consumer } from './context';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route
-    render={props =>
-      AuthService.isAuthenticated() ? (
-        <Component {...props} />
-      ) : (
-        <Redirect
-          to={{ pathname: ROUTES.SIGN_IN, state: { from: props.location } }}
-        />
-      )
-    }
-    {...rest}
-  ></Route>
+	<Route
+		render={props =>
+			AuthService.isAuthenticated() ? (
+				<Component {...props} />
+			) : (
+				<Redirect
+					to={{ pathname: ROUTES.SIGN_IN, state: { from: props.location } }}
+				/>
+			)
+		}
+		{...rest}
+	></Route>
 );
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
-  return (
-    <Consumer>
-      {({ user, isSubscribed }) => {
-        if (user && !isSubscribed()) {
-          return (
-            <Redirect
-              to={{
-                pathname: ROUTES.SUBSCRIPTION
-              }}
-            />
-          );
-        }
+	return (
+		<Consumer>
+			{({ user, isSubscribed }) => {
+				if (user && !isSubscribed()) {
+					return (
+						<Redirect
+							to={{
+								pathname: ROUTES.SUBSCRIPTION
+							}}
+						/>
+					);
+				}
 
-        return <PrivateRoute {...rest} component={Component} />;
-      }}
-    </Consumer>
-  );
+				return <PrivateRoute {...rest} component={Component} />;
+			}}
+		</Consumer>
+	);
 };
 
 const PublicRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={props =>
-      AuthService.isAuthenticated() ? (
-        <Redirect to={ROUTES.HOMEPAGE} />
-      ) : (
-        <Component {...props} />
-      )
-    }
-  ></Route>
+	<Route
+		{...rest}
+		render={props =>
+			AuthService.isAuthenticated() ? (
+				<Redirect to={ROUTES.HOMEPAGE} />
+			) : (
+				<Component {...props} />
+			)
+		}
+	></Route>
 );
 
 function AppRouter() {
@@ -115,6 +115,7 @@ function AppRouter() {
       </Switch>
     </Router>
   );
+
 }
 
 export default AppRouter;

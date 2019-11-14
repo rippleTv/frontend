@@ -9,23 +9,25 @@ import { Elements } from 'react-stripe-elements';
 
 import AsyncStripeProvider from './components/AsyncStripeProvider';
 
+import Login from "./components/Login";
+import LandingPage from "./components/LandingPage";
+import Signup from "./components/Signup";
+import PaymentPage from "./components/payment";
+import HomePage from "./components/HomePage";
+import SeriesPage from "./components/SeriesPage";
+import SubscriptionPage from "./components/SubscriptionPage";
+import MoviesPage from "./components/MoviesPage";
+import UserSection from "./components/UserSection";
+import ListPage from "./components/ListPage";
+import StreamingPage from "./components/StreamingPage";
+import NavPop from "./common/navPop";
+import VerifyScreen from "./components/VerifyScreen";
+import ConfirmScreen from "./components/ConfirmScreen";
+import ResetPassword from "./components/ResetPassword";
+import ResetConfirm from "./components/ResetConfirm";
+import ResetSuccessful from "./components/ResetSuccessful";
 import * as ROUTES from './routes';
 import AuthService from './utils/AuthService';
-
-import Login from './components/Login';
-import LandingPage from './components/LandingPage';
-import Signup from './components/Signup';
-import PaymentPage from './components/payment';
-import HomePage from './components/HomePage';
-import SeriesPage from './components/SeriesPage';
-import SubscriptionPage from './components/SubscriptionPage';
-import MoviesPage from './components/MoviesPage';
-import UserSection from './components/UserSection';
-import ListPage from './components/ListPage';
-import StreamingPage from './components/StreamingPage';
-import NavPop from './common/navPop';
-import VerifyScreen from './components/VerifyScreen';
-import ConfirmScreen from './components/ConfirmScreen';
 import Admin from './components/Admin';
 import MoviePreview from './components/MoviePreview';
 import SeriesPreview from './components/SeriesPreview';
@@ -89,6 +91,9 @@ function AppRouter() {
         <Route path={ROUTES.NAVPOP} component={NavPop}></Route>
         <Route path={ROUTES.VERIFY} component={VerifyScreen}></Route>
         <Route path={ROUTES.CONFIRM} component={ConfirmScreen}></Route>
+        <Route path={ROUTES.RESETPASSWORD} component={ResetPassword}></Route>
+        <Route path={ROUTES.RESETCONFIRM} component={ResetConfirm}></Route>
+        <Route path={ROUTES.RESETSUCCESSFUL} component={ResetSuccessful}></Route>
         <PublicRoute path={ROUTES.SIGN_IN} component={Login} />
         <PublicRoute path={ROUTES.SIGN_UP} component={Signup} />
 

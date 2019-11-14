@@ -27,6 +27,8 @@ import NavPop from './common/navPop';
 import VerifyScreen from './components/VerifyScreen';
 import ConfirmScreen from './components/ConfirmScreen';
 import Admin from './components/Admin';
+import MoviePreview from './components/MoviePreview';
+import SeriesPreview from './components/SeriesPreview';
 
 import { Consumer } from './context';
 
@@ -79,38 +81,41 @@ const PublicRoute = ({ component: Component, ...rest }) => (
 );
 
 function AppRouter() {
-	return (
-		<Router>
-			<Switch>
-				<Route exact path={ROUTES.LANDING} component={LandingPage} />
+  return (
+    <Router>
+      <Switch>
+        <Route exact path={ROUTES.LANDING} component={LandingPage} />
 
-				<Route path={ROUTES.NAVPOP} component={NavPop}></Route>
-				<Route path={ROUTES.VERIFY} component={VerifyScreen}></Route>
-				<Route path={ROUTES.CONFIRM} component={ConfirmScreen}></Route>
-				<PublicRoute path={ROUTES.SIGN_IN} component={Login} />
-				<PublicRoute path={ROUTES.SIGN_UP} component={Signup} />
+        <Route path={ROUTES.NAVPOP} component={NavPop}></Route>
+        <Route path={ROUTES.VERIFY} component={VerifyScreen}></Route>
+        <Route path={ROUTES.CONFIRM} component={ConfirmScreen}></Route>
+        <PublicRoute path={ROUTES.SIGN_IN} component={Login} />
+        <PublicRoute path={ROUTES.SIGN_UP} component={Signup} />
 
-				<PrivateRoute
-					path={ROUTES.PAYMENT}
-					render={props => (
-						<AsyncStripeProvider apiKey="pk_test_UPzrXmje24b500GtGySA7bdx00ai4PpbFZ">
-							<Elements>
-								<PaymentPage fontSize={16} {...props} />
-							</Elements>
-						</AsyncStripeProvider>
-					)}
-				/>
-				<PrivateRoute path={ROUTES.USER} component={UserSection} />
-				<PrivateRoute path={ROUTES.SUBSCRIPTION} component={SubscriptionPage} />
-				<ProtectedRoute path={ROUTES.HOMEPAGE} component={HomePage} />
-				<ProtectedRoute path={ROUTES.SERIESPAGE} component={SeriesPage} />
-				<ProtectedRoute path={ROUTES.MOVIES} component={MoviesPage} />
-				<ProtectedRoute path={ROUTES.ListPage} component={ListPage} />
-				<ProtectedRoute path={ROUTES.STREAM} component={StreamingPage} />
-				<ProtectedRoute path={ROUTES.ADMIN} component={Admin} />
-			</Switch>
-		</Router>
-	);
+        <PrivateRoute
+          path={ROUTES.PAYMENT}
+          render={props => (
+            <AsyncStripeProvider apiKey="pk_test_UPzrXmje24b500GtGySA7bdx00ai4PpbFZ">
+              <Elements>
+                <PaymentPage fontSize={16} {...props} />
+              </Elements>
+            </AsyncStripeProvider>
+          )}
+        />
+        <PrivateRoute path={ROUTES.USER} component={UserSection} />
+        <PrivateRoute path={ROUTES.SUBSCRIPTION} component={SubscriptionPage} />
+        <ProtectedRoute path={ROUTES.HOMEPAGE} component={HomePage} />
+        <ProtectedRoute path={ROUTES.SERIESPAGE} component={SeriesPage} />
+        <ProtectedRoute path={ROUTES.MOVIES} component={MoviesPage} />
+        <ProtectedRoute path={ROUTES.ListPage} component={ListPage} />
+        <ProtectedRoute path={ROUTES.STREAM} component={StreamingPage} />
+          <ProtectedRoute path={ROUTES.ADMIN} component={Admin}/>
+          <Route path={ROUTES.MOVIEPREVIEW} component={MoviePreview}></Route>
+				<Route path={ROUTES.SERIESPREVIEW} component={SeriesPreview}></Route>
+      </Switch>
+    </Router>
+  );
+
 }
 
 export default AppRouter;

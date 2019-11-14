@@ -40,10 +40,8 @@
     line-height: 2.6rem;
     color: var(--yellow);
 }
-.seriespage--drops{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #e8e8e8;
+.seriespage--middle__titles>select{
+    background: transparent;
     width: 17rem;
     font-family: Roboto;
     font-style: normal;
@@ -51,20 +49,12 @@
     font-size: 1.2rem;
     line-height: 1.4rem;
     text-align: center;
+    padding: 0.5rem 0rem;
     color: #858585;
+    border: none;
+    border-bottom: 1px solid #858585; 
 }
-.genre--dropdown{
-    top: 65px;
-    left: 240px;
-}
-.date--dropdown{
-    top: 6.5rem;
-    left: 65rem;
-}
-.quality--dropdown{
-    top: 6.5rem;
-    left: 104rem;
-}
+
 .series--border{
     margin: 0 auto;
     width:75%;

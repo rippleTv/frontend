@@ -4,6 +4,9 @@ html {
 body {
 	font-family: Roboto, Helvetica, sans-serif;
 }
+select:focus{
+	outline: none;
+}
 
 
 /* Base
@@ -42,6 +45,9 @@ body {
 @import 'components/adminupload.css';
 @import 'components/adminlist.css';
 @import 'components/adminpayment.css';
+@import 'components/moviepreview.css';
+@import 'components/seriespreview.css';
+@import 'components/previewcard.css';
 
 /* Reusable classes
 ========================================================================== */

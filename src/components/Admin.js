@@ -25,7 +25,7 @@ class Admin extends Component {
                 listActive=""
                 paymentActive=""
                 logActive=""
-            break;
+            break; 
 
             case "list":
                 area =<AdminList />

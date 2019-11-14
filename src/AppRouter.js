@@ -24,6 +24,7 @@ import StreamingPage from "./components/StreamingPage";
 import NavPop from "./common/navPop";
 import VerifyScreen from "./components/VerifyScreen";
 import ConfirmScreen from "./components/ConfirmScreen";
+import ResetPassword from "./components/ResetPassword";
 
 import { Consumer } from "./context";
 
@@ -84,6 +85,7 @@ function AppRouter() {
         <Route path={ROUTES.NAVPOP} component={NavPop}></Route>
         <Route path={ROUTES.VERIFY} component={VerifyScreen}></Route>
         <Route path={ROUTES.CONFIRM} component={ConfirmScreen}></Route>
+        <Route path={ROUTES.RESETPASSWORD} component={ResetPassword}></Route>
         <PublicRoute path={ROUTES.SIGN_IN} component={Login} />
         <PublicRoute path={ROUTES.SIGN_UP} component={Signup} />
 

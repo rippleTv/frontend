@@ -37,6 +37,7 @@ body {
 @import 'components/navpop.css';
 @import 'components/verifyscreen.css';
 @import 'components/confirmscreen.css';
+@import 'components/resetPassword.css'; 
 
 /* Reusable classes
 ========================================================================== */

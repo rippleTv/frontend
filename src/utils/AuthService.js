@@ -96,6 +96,11 @@ class AuthService {
 		return this.fetch(`${API_URL}/movies`);
 	}
 
+	//get single Movies
+	getMovieById(id) {
+		return this.fetch(`${API_URL}/movies/${id}`);
+	}
+
 	//send reset password email
 	sendPasswordResetMail(body) {
 		return this.fetch(`${API_URL}/user/reset-password`, {

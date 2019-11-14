@@ -2,38 +2,29 @@ import React, { Component } from 'react';
 import NavBar from '../common/navbar';
 import ImageSlider from '../common/imageSlider';
 
+import Auth from '../utils/AuthService';
 
-class SeriePage extends Component {
+class MoviesPage extends Component {
 	state = {
-		displayGenre: false,
-		displayDate: false,
-		displayQuality: false
+		loading: false,
+		movies: []
 	};
 
-	handleDrop = display => {
-		if (display === 'genre')
-			this.setState({
-				displayGenre: !this.state.displayGenre,
-				displayDate: false,
-				displayQuality: false
+	componentDidMount() {
+		this.setState({ loading: true });
+		Auth.getMovies()
+			.then(response => {
+				this.setState({ movies: response.data, loading: false });
+			})
+			.catch(error => {
+				console.log(error);
 			});
-
-		if (display === 'date')
-			this.setState({
-				displayGenre: false,
-				displayDate: !this.state.displayDate,
-				displayQuality: false
-			});
-
-		if (display === 'quality')
-			this.setState({
-				displayGenre: false,
-				displayDate: false,
-				displayQuality: !this.state.displayQuality
-			});
-	};
+	}
 
 	render() {
+		console.log('IN MOVIES PAGE');
+		const { loading, movies } = this.state;
+		console.log(movies);
 		return (
 			<div className="moviespage">
 				<div className="moviespage--header">
@@ -45,7 +36,6 @@ class SeriePage extends Component {
 							Enjoy varieties of amazing Nollywood movies
 						</p>
 						<p className="lastP">from top notch actors and superstars.</p>
-						
 					</div>
 				</div>
 
@@ -58,7 +48,7 @@ class SeriePage extends Component {
 							<option value="thriller">Thriller</option>
 						</select>
 					</div>
-					
+
 					<div className="moviespage--middle__titles">
 						<h3>Release Date</h3>
 						<select name="" id="">
@@ -67,7 +57,6 @@ class SeriePage extends Component {
 							<option value="2017">2017</option>
 						</select>
 					</div>
-
 
 					<div className="moviespage--middle__titles">
 						<h3>Quality</h3>
@@ -78,12 +67,14 @@ class SeriePage extends Component {
 						</select>
 					</div>
 				</div>
-
-				<ImageSlider sliderTitle="Coming Soon" />
+				<div className="container">
+					{loading && <span style={{ fontSize: 16 }}>loading...</span>}
+				</div>
+				<ImageSlider sliderTitle="Coming Soon" movies={movies} />
 				<div className="movies--border"></div>
-				<ImageSlider sliderTitle="Popular" />
+				<ImageSlider sliderTitle="Popular" movies={movies} />
 				<div className="movies--border"></div>
-				<ImageSlider sliderTitle="Trending" />
+				<ImageSlider sliderTitle="Trending" movies={movies} />
 
 				<div className="home--footer"></div>
 			</div>
@@ -91,4 +82,4 @@ class SeriePage extends Component {
 	}
 }
 
-export default SeriePage;
+export default MoviesPage;

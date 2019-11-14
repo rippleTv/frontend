@@ -44,7 +44,7 @@ export default class player extends Component {
 			const videoElem = this.refs.video;
 			videoElem.play();
 
-			await this.player.load(this.props.src);
+			await this.player.load(this.props.movie.dash);
 			// This runs if the asynchronous load is successful.
 			console.log('Video Loaded');
 			this.setState({ showControls: true, duration: videoElem.duration });
@@ -150,6 +150,8 @@ export default class player extends Component {
 			currentTime,
 			duration
 		} = this.state;
+
+		const { movie } = this.props;
 		return (
 			<section className="video-player">
 				<button className="play__button" onClick={this.requestVideoStart}>
@@ -163,7 +165,7 @@ export default class player extends Component {
 				)}
 				<video
 					ref="video"
-					poster="https://res.cloudinary.com/dqfn8m6ti/image/upload/v1573114594/black-1072366_640.jpg"
+					poster={movie.poster}
 					onTimeUpdate={this.handleVideoTimeUpdate}
 				></video>
 
@@ -186,3 +188,10 @@ export default class player extends Component {
 		);
 	}
 }
+
+player.defaultProps = {
+	dash:
+		'https://res.cloudinary.com/dqfn8m6ti/video/upload/sp_hd/v1573129951/THE_WEDDING_PARTY.mpd',
+	poster:
+		'https://res.cloudinary.com/dqfn8m6ti/image/upload/v1573114594/black-1072366_640.jpg'
+};

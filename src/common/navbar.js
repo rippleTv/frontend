@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink,Link} from 'react-router-dom';
 import * as ROUTES from '../routes';
 import logo from '../img/Ripple-Logo.png';
 
@@ -25,7 +25,7 @@ class NavBar extends Component {
 						<div className="nav--item"><NavLink to="/lists" activeClassName="active--nav__item">My List</NavLink></div>
 					</div>
 					<i className="fas fa-search"></i>
-					<i className="fas fa-user-circle"></i>
+					<Link to="/user"><i className="fas fa-user-circle"></i></Link>
 				</nav>
 
 				<nav className={`generic--navbar__sm ${this.props.giveClass}`}>
@@ -33,7 +33,7 @@ class NavBar extends Component {
 					<img src={logo} alt="ripple-logo" />
 
 					<i className="fas fa-search"></i>
-					<i className="fas fa-user-circle"></i>
+					<Link to='/user'><i className="fas fa-user-circle"></i></Link>
 				</nav>
 
 			</div>

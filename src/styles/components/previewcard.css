@@ -1,0 +1,34 @@
+.previewcard{
+    max-width: 30.3rem;
+    padding: 1rem 0rem;
+}
+.previewcard--footer{
+    width: 100%;
+    display: flex;
+    padding-top: 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 16px;
+    color: #3F3F3F;
+}
+.previewcard--footer>span{
+    padding: 0rem 0.8rem;
+}
+.previewcard--text1{
+    font-weight: bold;
+}
+.previewcard--text2{
+    border-right: 1px solid #3F3F3F;
+    border-left: 1px solid #3F3F3F;
+}
+.previewcard--text3{
+    margin-right: auto;
+}
+.fa-heart{
+    color: #C50505;
+}
+.fa-heart:hover{
+    cursor: pointer;
+}

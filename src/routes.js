@@ -13,4 +13,6 @@ export const NAVPOP = '/pop';
 export const CONFIRM = '/confirm';
 export const VERIFY = '/verify';
 export const ADMIN = '/admin';
+export const MOVIEPREVIEW = '/moviepreview';
+export const SERIESPREVIEW = '/seriespreview';
 

@@ -12,6 +12,7 @@ const formatAmount = x =>
 function Subscription({ plans, isSubscribed }) {
   if (isSubscribed()) {
     return <Redirect to={ROUTES.HOMEPAGE} />;
+  
   }
   return (
     <section className="subscription__page">

@@ -7,6 +7,7 @@ const Button = props => {
   const disabled = props.disabled ? props.disabled : false;
   const type = props.type ? props.type : "";
   return (
+    <Link to={props.path}>
     <button
       className={`${props.giveClass} ${className}`}
       style={{
@@ -16,8 +17,9 @@ const Button = props => {
       type={type}
       disabled={disabled}
     >
-      <Link to={props.path}>{props.label}</Link>
+     {props.label}
     </button>
+    </Link>
   );
 };
 

@@ -14,14 +14,14 @@
     margin: 0 auto;
 }
 .seriespage--head__content{
-    width: 70%;
+    width: 82%;
     margin: 0 auto;
     padding: 0 auto 4rem;
 }
 .seriespage--middle{
-    width: 90%;
+    width: 82%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1rem;
     margin: 0 auto 9rem;
     position: relative;
@@ -57,7 +57,7 @@
 
 .series--border{
     margin: 0 auto;
-    width:75%;
+    width:80%;
     border-top: .01rem solid #858585;
     padding-top: 9rem;
 }

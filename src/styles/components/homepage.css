@@ -15,11 +15,11 @@
 	background: var(--bg-gradient);
 	/* mix-blend-mode: multiply; */
     opacity: var(--bg-opacity);
-    padding: 2rem 1rem;
+    padding: 4rem 0rem;
     margin: 0;
 }
 .homepage--nav{
-    margin: 2rem 0rem;
+    margin: 0rem 0rem;
 }
 .homepage--head__content{
     display: flex;

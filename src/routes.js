@@ -13,9 +13,8 @@ export const NAVPOP = '/pop';
 export const CONFIRM = '/confirm';
 export const VERIFY = '/verify';
 export const RESETPASSWORD = '/resetpassword';
-export const RESETCONFIRM = '/resetconfirm';
-export const RESETSUCCESSFUL = '/resetsuccessful'
+export const RESETCONFIRM = '/resetconfirm/:token';
+export const RESETSUCCESSFUL = '/resetsuccessful';
 export const ADMIN = '/admin';
 export const MOVIEPREVIEW = '/moviepreview';
 export const SERIESPREVIEW = '/seriespreview';
-

@@ -37,6 +37,11 @@ body {
 @import 'components/navpop.css';
 @import 'components/verifyscreen.css';
 @import 'components/confirmscreen.css';
+@import 'components/adminnav.css';
+@import 'components/admin.css';
+@import 'components/adminupload.css';
+@import 'components/adminlist.css';
+@import 'components/adminpayment.css';
 
 /* Reusable classes
 ========================================================================== */

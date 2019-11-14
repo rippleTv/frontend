@@ -1,0 +1,59 @@
+.adminlist--header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    background: #212121;
+}
+.adminlist--header>label, .adminlist--header>select {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #FFFFFF;
+   
+}
+.adminlist--header>label{
+    padding: 10px;
+}
+.adminlist--header>select{
+    background: #101010;
+    padding: 2px;
+    border: none;
+    border-radius: 2px;
+}
+.adminlist--header>select:focus{
+    outline: none;
+}
+.adminlist--header>select:hover{
+    cursor: pointer;
+}
+.adminlist--table{
+    width: 90%;
+    border-collapse: collapse;
+    padding: 10rem 7rem;
+    margin: 0rem auto;
+
+}
+.adminlist--table thead th{
+    padding: 2rem 0rem 1rem;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    color: #F9B109;
+
+}
+.adminlist--table tbody tr{
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    color: #FFFFFF;
+   
+}

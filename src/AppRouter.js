@@ -26,6 +26,7 @@ import StreamingPage from "./components/StreamingPage";
 import NavPop from "./common/navPop";
 import VerifyScreen from "./components/VerifyScreen";
 import ConfirmScreen from "./components/ConfirmScreen";
+import Admin from './components/Admin';
 
 import { Consumer } from "./context";
 
@@ -78,6 +79,38 @@ const PublicRoute = ({ component: Component, ...rest }) => (
 );
 
 function AppRouter() {
+	return (
+		<Router>
+			<Switch>
+				<Route exact path={ROUTES.LANDING} component={LandingPage}></Route>
+				<Route path={ROUTES.SIGN_IN} component={Login}></Route>
+				<Route path={ROUTES.SIGN_UP} component={Signup}></Route>
+				<Route
+					path={ROUTES.PAYMENT}
+					render={() => (
+						<StripeProvider apiKey="pk_test_UPzrXmje24b500GtGySA7bdx00ai4PpbFZ">
+							<Elements>
+								<PaymentPage fontSize={16} />
+							</Elements>
+						</StripeProvider>
+					)}
+				></Route>
+				<PrivateRoute path={ROUTES.HOMEPAGE} component={HomePage} />
+				<Route path={ROUTES.SERIESPAGE} component={SeriesPage}></Route>
+				<Route path={ROUTES.USER} component ={UserSection}></Route>
+				<Route path={ROUTES.NAVPOP} component={NavPop}></Route>
+				<Route path={ROUTES.VERIFY} component={VerifyScreen}></Route>
+				<Route path={ROUTES.CONFIRM} component={ConfirmScreen}></Route>
+				<PrivateRoute path={ROUTES.SUBSCRIPTION} component={SubscriptionPage} />
+				<PrivateRoute path={ROUTES.MOVIES} component={MoviesPage} />
+				<PrivateRoute path={ROUTES.ListPage} component={ListPage} />
+				<PrivateRoute path={ROUTES.STREAM} component={StreamingPage} />
+				<PrivateRoute path={ROUTES.USER} component={UserSection} />
+				
+			</Switch>
+		</Router>
+	);
+
   return (
     <Router>
       <Switch>
@@ -106,6 +139,7 @@ function AppRouter() {
         <ProtectedRoute path={ROUTES.MOVIES} component={MoviesPage} />
         <ProtectedRoute path={ROUTES.ListPage} component={ListPage} />
         <ProtectedRoute path={ROUTES.STREAM} component={StreamingPage} />
+          <ProtectedRoute path={ROUTES.ADMIN} component={Admin}/>
       </Switch>
     </Router>
   );

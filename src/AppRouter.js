@@ -1,14 +1,13 @@
-import React from "react";
+import React from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from "react-router-dom";
-import { StripeProvider, Elements } from "react-stripe-elements";
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Redirect
+} from 'react-router-dom';
+import { Elements } from 'react-stripe-elements';
 
-import * as ROUTES from "./routes";
-import AuthService from "./utils/AuthService";
+import AsyncStripeProvider from './components/AsyncStripeProvider';
 
 import Login from "./components/Login";
 import LandingPage from "./components/LandingPage";
@@ -27,55 +26,60 @@ import ConfirmScreen from "./components/ConfirmScreen";
 import ResetPassword from "./components/ResetPassword";
 import ResetConfirm from "./components/ResetConfirm";
 import ResetSuccessful from "./components/ResetSuccessful";
+import * as ROUTES from './routes';
+import AuthService from './utils/AuthService';
+import Admin from './components/Admin';
+import MoviePreview from './components/MoviePreview';
+import SeriesPreview from './components/SeriesPreview';
 
-import { Consumer } from "./context";
+import { Consumer } from './context';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route
-    render={props =>
-      AuthService.isAuthenticated() ? (
-        <Component {...props} />
-      ) : (
-        <Redirect
-          to={{ pathname: ROUTES.SIGN_IN, state: { from: props.location } }}
-        />
-      )
-    }
-    {...rest}
-  ></Route>
+	<Route
+		render={props =>
+			AuthService.isAuthenticated() ? (
+				<Component {...props} />
+			) : (
+				<Redirect
+					to={{ pathname: ROUTES.SIGN_IN, state: { from: props.location } }}
+				/>
+			)
+		}
+		{...rest}
+	></Route>
 );
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
-  return (
-    <Consumer>
-      {({ user }) => {
-        if (user && !user.isSubscribed) {
-          return (
-            <Redirect
-              to={{
-                pathname: ROUTES.SUBSCRIPTION
-              }}
-            />
-          );
-        }
+	return (
+		<Consumer>
+			{({ user, isSubscribed }) => {
+				if (user && !isSubscribed()) {
+					return (
+						<Redirect
+							to={{
+								pathname: ROUTES.SUBSCRIPTION
+							}}
+						/>
+					);
+				}
 
-        return <PrivateRoute component={Component} {...rest} />;
-      }}
-    </Consumer>
-  );
+				return <PrivateRoute {...rest} component={Component} />;
+			}}
+		</Consumer>
+	);
 };
 
 const PublicRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={props =>
-      AuthService.isAuthenticated() ? (
-        <Redirect to={ROUTES.HOMEPAGE} />
-      ) : (
-        <Component {...props} />
-      )
-    }
-  ></Route>
+	<Route
+		{...rest}
+		render={props =>
+			AuthService.isAuthenticated() ? (
+				<Redirect to={ROUTES.HOMEPAGE} />
+			) : (
+				<Component {...props} />
+			)
+		}
+	></Route>
 );
 
 function AppRouter() {
@@ -95,12 +99,12 @@ function AppRouter() {
 
         <PrivateRoute
           path={ROUTES.PAYMENT}
-          render={() => (
-            <StripeProvider apiKey="pk_test_UPzrXmje24b500GtGySA7bdx00ai4PpbFZ">
+          render={props => (
+            <AsyncStripeProvider apiKey="pk_test_UPzrXmje24b500GtGySA7bdx00ai4PpbFZ">
               <Elements>
-                <PaymentPage fontSize={16} />
+                <PaymentPage fontSize={16} {...props} />
               </Elements>
-            </StripeProvider>
+            </AsyncStripeProvider>
           )}
         />
         <PrivateRoute path={ROUTES.USER} component={UserSection} />
@@ -110,9 +114,13 @@ function AppRouter() {
         <ProtectedRoute path={ROUTES.MOVIES} component={MoviesPage} />
         <ProtectedRoute path={ROUTES.ListPage} component={ListPage} />
         <ProtectedRoute path={ROUTES.STREAM} component={StreamingPage} />
+          <ProtectedRoute path={ROUTES.ADMIN} component={Admin}/>
+          <Route path={ROUTES.MOVIEPREVIEW} component={MoviePreview}></Route>
+				<Route path={ROUTES.SERIESPREVIEW} component={SeriesPreview}></Route>
       </Switch>
     </Router>
   );
+
 }
 
 export default AppRouter;

@@ -15,3 +15,7 @@ export const VERIFY = '/verify';
 export const RESETPASSWORD = '/resetpassword';
 export const RESETCONFIRM = '/resetconfirm';
 export const RESETSUCCESSFUL = '/resetsuccessful'
+export const ADMIN = '/admin';
+export const MOVIEPREVIEW = '/moviepreview';
+export const SERIESPREVIEW = '/seriespreview';
+

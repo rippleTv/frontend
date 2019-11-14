@@ -1,43 +1,65 @@
 .video__details {
-	padding-top: 50px;
-	line-height: 21px;
-	font-size: 16px;
+  padding-top: 50px;
+  font-size: 16px;
 }
 
 .video__details .video__info {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-style: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-style: normal;
 }
 
 .video__details .video__info h2 {
-	font-weight: bold;
-	font-size: 38px;
-	line-height: 45px;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 45px;
+}
+
+.video__details .video__stats {
+  margin-top: 5px;
 }
 
 .video__info .views {
-	margin-right: 25px;
+  margin-right: 10px;
+  flex: 1;
+  /* display: flex; */
+  /* align-items: center; */
 }
 
 .video__details .video__stats span,
 .video__details .video__stats svg {
-	color: #4f4f4f;
-	padding: 0 7.5px;
-	font-weight: bold;
+  color: #4f4f4f;
+  padding: 0 7.5px;
+  font-weight: bold;
 }
 
 .video__details .description {
-	margin-top: 20px;
-	width: 50%;
-	line-height: 22px;
+  margin-top: 20px;
+  max-width: 500px;
+  line-height: 22px;
 }
 
 .video__details .description article {
-	overflow-wrap: break-word;
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: normal;
-	color: #3f3f3f;
+  overflow-wrap: break-word;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  color: #3f3f3f;
+  line-height: 25px;
+}
+
+@media (max-width: 576px) {
+  .video__details .video__info h2 {
+    font-size: 2rem;
+  }
+  .video__info .views {
+    font-size: 1.2rem;
+
+    /* width: ; */
+  }
+  .video__info .views svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
 }

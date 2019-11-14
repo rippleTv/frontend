@@ -1,40 +1,65 @@
-import React from 'react';
+import React from "react";
 
-import StateContext from './context';
-import AuthService from '../utils/AuthService';
+import StateContext from "./context";
+import AuthService from "../utils/AuthService";
 
 const injectState = Component => {
-	class InjectState extends React.Component {
-		state = {
-			user: {},
-			movies: []
-		};
+  class InjectState extends React.Component {
+    state = {
+      user: null,
+      movies: [],
+      plans: []
+    };
 
-		componentDidMount() {
-			if (AuthService.isAuthenticated()) {
-				this.updateUserData();
-			}
-		}
+    componentDidMount() {
+      if (AuthService.isAuthenticated()) {
+        this.getUserData();
+      }
+    }
 
-		updateUserData = async () => {
-			const response = await AuthService.getUserData();
-			console.log(response);
-			response.data.isSubscribed = false;
-			this.setState({ user: response.data });
-		};
+    isSubscribed = () => {
+      const { user } = this.state;
+      let isSubscribed = false;
+      if (user && user.subscription) {
+        const expiryDate = new Date(user.subscription.expiresAt);
+        isSubscribed = expiryDate > new Date();
+      }
+      return isSubscribed;
+    };
 
-		render() {
-			const { updateUserData, state } = this;
-			const value = { ...state, updateUserData };
-			return (
-				<StateContext.Provider value={value}>
-					<Component {...this.props} />
-				</StateContext.Provider>
-			);
-		}
-	}
+    updateUserData = data => {
+      this.setState({ user: data });
+    };
 
-	return InjectState;
+    getUserData = async () => {
+      const response = await AuthService.getUserData();
+      const { data } = await AuthService.getPlans();
+      this.setState({ user: response.data, plans: data });
+    };
+
+    render() {
+      const {
+        getUserData,
+        updateUserData,
+        state,
+
+        isSubscribed
+      } = this;
+      const value = {
+        ...state,
+        updateUserData,
+        getUserData,
+        isSubscribed
+      };
+      return (
+        <StateContext.Provider value={value}>
+          <Component {...this.props} />
+        </StateContext.Provider>
+      );
+    }
+  }
+
+  return InjectState;
 };
 
 export default injectState;

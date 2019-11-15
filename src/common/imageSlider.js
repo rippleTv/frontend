@@ -8,8 +8,8 @@ import img3 from '../img/img2.png';
 import img4 from '../img/img3.png';
 
 class ImageSlider extends Component {
-	state = {};
 	render() {
+		const movies = this.props.movies.filter(movie => movie.image);
 		const responsive = {
 			superLargeDesktop: {
 				// the naming can be any, depends on you.
@@ -35,26 +35,22 @@ class ImageSlider extends Component {
 			}
 		};
 
-
 		return (
 			<div className="container">
 				<div className={`generic--slider ${this.props.giveClass}`}>
 					<h1>{this.props.sliderTitle}</h1>
 					<Carousel
 						responsive={responsive}
-						
 						infinite={true}
-				
 						removeArrowOnDeviceType={['tablet', 'tab', 'mobile']}
 						containerClass="slider"
 						sliderClass="hit"
 						itemClass="floppy"
 					>
-						{this.props.images.map((data, id) => (
-							<Card key={id} image={data.name} />
+						{movies.map((movie, id) => (
+							<Card key={id} movie={movie} />
 						))}
 					</Carousel>
-					
 				</div>
 			</div>
 		);
@@ -62,13 +58,13 @@ class ImageSlider extends Component {
 }
 
 ImageSlider.defaultProps = {
+	movies: [],
 	images: [
 		{ name: img1 },
 		{ name: img2 },
 		{ name: img3 },
 		{ name: img4 },
-		{ name: img1 },
-		
+		{ name: img1 }
 	],
 	sliderTitle: 'Coming Soon'
 };

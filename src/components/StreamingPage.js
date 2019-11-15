@@ -1,30 +1,44 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import NavBar from "../common/navbar";
+import NavBar from '../common/navbar';
 
-import VideoPlayer from "./video/player";
-import VideoDetails from "./video/video-details";
-import ImageSlider from "../common/imageSlider";
+import VideoPlayer from './video/player';
+import VideoDetails from './video/video-details';
+import ImageSlider from '../common/imageSlider';
 
-const manifestUri =
-  "https://res.cloudinary.com/dqfn8m6ti/video/upload/sp_hd/v1573129951/THE_WEDDING_PARTY.mpd";
+import Auth from '../utils/AuthService';
+import * as ROUTES from '../routes';
 
 class StreamingPage extends Component {
-  render() {
-    return (
-      <div class="streaming-page">
-        <header>
-          <NavBar></NavBar>
-        </header>
+	state = {
+		movie: {}
+	};
+	async componentDidMount() {
+		try {
+			const { movieId } = this.props.match.params;
+			const { data } = await Auth.getMovieById(movieId);
+			this.setState({ movie: data });
+		} catch (error) {
+			if (error.status === 404) this.history.push(ROUTES.MOVIES);
+			console.log(error);
+		}
+	}
+	render() {
+		const { movie } = this.state;
+		return (
+			<div class="streaming-page">
+				<header>
+					<NavBar></NavBar>
+				</header>
 
-        <VideoPlayer src={manifestUri} />
+				<VideoPlayer movie={movie} />
 
-        <div className="container">
-          <VideoDetails />
-        </div>
-      </div>
-    );
-  }
+				<div className="container">
+					<VideoDetails movie={movie} />
+				</div>
+			</div>
+		);
+	}
 }
 
 export default StreamingPage;

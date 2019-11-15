@@ -11,12 +11,6 @@ export default function videoDetails({ movie }) {
 					<span className="views">
 						<View></View>10
 					</span>
-
-					<Button
-						buttonType="yellow-button"
-						label="ADD TO LIST"
-						width="143px"
-					/>
 				</div>
 			</section>
 			<section className="video__stats">

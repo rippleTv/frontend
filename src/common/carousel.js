@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import Carousel from 're-carousel'
+// import Carousel from 're-carousel'
 import NavBar from './navbar';
 import Button from './button';
 
-
 class HomeCarousel extends Component {
-    state = {  }
-    render() { 
-        return ( 
-			<div style={{backgroundColor: 'tomato', height: '100%'}}>Frame 1</div>
+	state = {};
+	render() {
+		return (
+			<div style={{ backgroundColor: 'tomato', height: '100%' }}>Frame 1</div>
 
 			// <Carousel auto>
 			// 	<div style={{backgroundColor: 'tomato', height: '100%'}}>Frame 1</div>
@@ -16,7 +15,7 @@ class HomeCarousel extends Component {
 			// 	<div style={{backgroundColor: 'orchid', height: '100%'}}>Frame 3</div>
 			// </Carousel>
 
-            // <Carousel auto loop interval={3000}>
+			// <Carousel auto loop interval={3000}>
 			// 	<div>
 			// 		home
 			// 	</div>
@@ -26,7 +25,7 @@ class HomeCarousel extends Component {
 			// 	<div>
 			// 		heeee
 			// 	</div>
-            //    {/* <div className="homepage--wrapper">
+			//    {/* <div className="homepage--wrapper">
 			// 		<NavBar />
 
 			// 	<div className="homepage--head__content">
@@ -48,9 +47,8 @@ class HomeCarousel extends Component {
 			// 			></i>
 			// 		</div>
 			// 	</div>
-                
-                
-            //     <div className="homepage--wrapper">
+
+			//     <div className="homepage--wrapper">
 			// 		<NavBar giveClass="homepage--nav" />
 
 			// 	<div className="homepage--head__content">
@@ -72,9 +70,9 @@ class HomeCarousel extends Component {
 			// 			></i>
 			// 		</div>
 			// 	</div> */}
-            // </Carousel>
-         );
-    }
+			// </Carousel>
+		);
+	}
 }
- 
+
 export default HomeCarousel;

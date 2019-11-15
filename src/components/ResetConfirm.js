@@ -40,7 +40,7 @@ class ResetConfirm extends Component {
 		if (password2 !== password) {
 			return;
 		}
-		console.log(token);
+
 		this.setState({ loading: true, disabled: true });
 		AuthService.sendPasswordReset({ password }, token)
 			.then(response => {
@@ -85,7 +85,11 @@ class ResetConfirm extends Component {
 				<div className="reset__confirm__card">
 					<img src={resetimage} alt="resetimage"></img>
 					<h1>Reset Password</h1>
-					<form action="" className="reset__confirm__form">
+					<form
+						action=""
+						className="reset__confirm__form"
+						onSubmit={this.handleSubmit}
+					>
 						{error && <p className="error-message">{error}</p>}
 						<div className="reset__confirm__input">
 							<input

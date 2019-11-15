@@ -38,7 +38,7 @@ class ResetPassword extends Component {
 		this.setState({ loading: true, disabled: true });
 		AuthService.sendPasswordResetMail({ email })
 			.then(response => {
-				console.log(response);
+				alert('Kindly Check your mail for the password reset link');
 				this.props.history.push(ROUTES.SIGN_IN);
 			})
 			.catch(error => {

@@ -12,7 +12,7 @@
 	z-index: 2;
 	width: 100vw;
 	height: 65.7rem;
-	background: var(--bg-gradient);
+	background: var(--bg-gradient) ;
 	/* mix-blend-mode: multiply; */
     opacity: var(--bg-opacity);
     padding: 4rem 0rem;

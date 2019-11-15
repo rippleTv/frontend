@@ -40,9 +40,11 @@ class ResetConfirm extends Component {
 		if (password2 !== password) {
 			return;
 		}
+		console.log(token);
 		this.setState({ loading: true, disabled: true });
 		AuthService.sendPasswordReset({ password }, token)
 			.then(response => {
+				console.log(response);
 				this.props.history.push(ROUTES.RESETSUCCESSFUL);
 			})
 			.catch(error => {

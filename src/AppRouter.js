@@ -33,6 +33,7 @@ import MoviePreview from './components/MoviePreview';
 import SeriesPreview from './components/SeriesPreview';
 
 import { Consumer } from './context';
+import HomeCarousel from './common/carousel';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
 	<Route
@@ -87,12 +88,11 @@ function AppRouter() {
     <Router>
       <Switch>
         <Route exact path={ROUTES.LANDING} component={LandingPage} />
-
         <Route path={ROUTES.NAVPOP} component={NavPop}></Route>
         <Route path={ROUTES.VERIFY} component={VerifyScreen}></Route>
         <Route path={ROUTES.CONFIRM} component={ConfirmScreen}></Route>
-        <Route path={ROUTES.RESETPASSWORD} component={ResetPassword}></Route>
-        <Route path={ROUTES.RESETCONFIRM} component={ResetConfirm}></Route>
+        <Route path={ROUTES.RESETPASSWORD} exact component={ResetPassword}></Route>
+        <Route path={ROUTES.RESETCONFIRM} exact component={ResetConfirm}></Route>
         <Route path={ROUTES.RESETSUCCESSFUL} component={ResetSuccessful}></Route>
         <PublicRoute path={ROUTES.SIGN_IN} component={Login} />
         <PublicRoute path={ROUTES.SIGN_UP} component={Signup} />

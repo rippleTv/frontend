@@ -171,6 +171,19 @@
 	margin-left: 7rem;
 	margin-top: 5rem;
 }
+.forgotPassLink{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 14px;
+	color: #3F3F3F;
+	transition: all 0.3s ease-in-out;
+}
+.forgotPassLink:hover{
+	transform: scale(1.02);
+	text-decoration: underline;
+}
 /* MEDIA QUERIES */
  @media only screen and (max-width: 900px)  {
 	.login {

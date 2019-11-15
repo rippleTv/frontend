@@ -1,33 +1,36 @@
-.subscriptionpage--userheader{
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 15px;
+.subscriptionpage--userheader {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 15px;
 }
-.subscriptionpage--userheader>h3{
-    margin-right: 142px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 2rem;
-    line-height: 33px;
-    color: #3F3F3F;
+.user_subscriptionpage {
+	margin-bottom: 40px;
 }
-.plus--sign{
-    background: var(--yellow);
-    padding: 10px;
-    font-size: 20px;
-    color: white;
-    border-radius: 10px;
-    width: 40px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: center;
-    color: #FFFFFF;
+.subscriptionpage--userheader > h3 {
+	margin-right: 142px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 2rem;
+	line-height: 33px;
+	color: #3f3f3f;
+}
+.plus--sign {
+	background: var(--yellow);
+	padding: 10px;
+	font-size: 20px;
+	color: white;
+	border-radius: 10px;
+	width: 40px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #ffffff;
 }
 /* .del--sign{
     background: transparent;
@@ -46,138 +49,137 @@
 } */
 
 /* ------------------------------------------------------MANAGE-SUB-BOTTOM------------------------------------------------ */
-.subscriptionpage--userbottom{
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
-    overflow-y: hidden;
+.subscriptionpage--userbottom {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 20px;
+	overflow-y: hidden;
 }
-.subscriptionpage--userbottom>h3{
-    margin-right: 215px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 2rem;
-    line-height: 33px;
-    color: #3F3F3F;
+.subscriptionpage--userbottom > h3 {
+	margin-right: 215px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 2rem;
+	line-height: 33px;
+	color: #3f3f3f;
 }
-.cardplus{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
+.cardplus {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.subuser--button{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 32.7rem;
-    height: 7.65rem;
-    background: #C4C4C4;
-    border-radius: 10px;
-    margin: 1rem 0rem;
-    transition: transform 0.3s ease-in-out;
+.subuser--button {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex: 1;
+	max-width: 32.7rem;
+	height: 7.65rem;
+	background: #c4c4c4;
+	border-radius: 10px;
+	margin: 1rem 0rem;
+	transition: transform 0.3s ease-in-out;
+	flex: 1;
 }
-.subuser--button:hover{
-    background: var(--yellow);
-    transform: scale(1.04);
-
+.subuser--button:hover {
+	background: var(--yellow);
+	transform: scale(1.04);
 }
-.subuser--button__first{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.8rem;
-    line-height: 28px;
-    letter-spacing: 1px;
-    color: #FFFFFF;
-
+.subuser--button__first {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.8rem;
+	line-height: 28px;
+	letter-spacing: 1px;
+	color: #ffffff;
 }
-.subuser--button__second{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size:1.2rem;
-    line-height: 20px;
-    text-align: center;
-    color: #FFFFFF;
+.subuser--button__second {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.2rem;
+	line-height: 20px;
+	text-align: center;
+	color: #ffffff;
 }
-.subuser--active{
-    background: var(--yellow);
+.subuser--active {
+	background: var(--yellow);
 }
-.subuser--section{
-    display: flex;
-    align-items: center;
+.subuser--section {
+	display: flex;
+	align-items: center;
+	width: calc(32.7rem + 60px);
+	justify-content: flex-start;
 }
-.subuser--cancel{
-    opacity: 0;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    color:  var(--yellow);
-    border: 2px solid #F9B109;
-    box-sizing: border-box;
-    border-radius: 10px;
-    margin-left: 5px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 19px;
-    transition: transform 0.5s ease-in-out ;
+.subuser--cancel {
+	opacity: 0;
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	color: var(--yellow);
+	border: 2px solid #f9b109;
+	box-sizing: border-box;
+	border-radius: 10px;
+	margin-left: 5px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	transition: transform 0.5s ease-in-out;
 }
-.subuser--cancel:hover{
-   opacity: 1;
-   transform: scale(1.05)
+.subuser--cancel:hover {
+	opacity: 1;
+	transform: scale(1.05);
 }
 
 /* -----------------------------------------------------------ALL-MEDIA-QUERIES---------------------------------------------------------------- */
 
-
-@media only screen and (max-width: 459px){
-    .cardplus{
-        width: 100px;
-    }
-    .subscriptionpage--userheader>h3{
-        margin-right: 142px;
-        font-size: 1rem;
-    }
-    .cardplus>img{
-        width: 15rem;
-        height: 9.1rem
-    }
-    .subscriptionpage--userbottom>h3{
-        margin-right: 159px;
-        font-size: 1rem;
-    }
-    .subuser--button{
-        width: 15rem;
-        height: 5rem
-    }
-    .subuser--button__first{
-        font-size: 0.9rem;
-       
-    }
-    .subuser--button__second{
-        font-size: 0.7rem;
-        letter-spacing: 1px;
-    }
-    .plus--sign{
-        padding: 5px;
-        font-size: 10px;
-        border-radius: 5px;
-        width: 20px;
-        font-size: 10px;
-        line-height: 10px;
-    }
-    .subuser--cancel{
-        width: 20px;
-        height: 20px;
-        font-size: 1rem;
-        line-height: 1rem;
-        border-radius: 5px;
-    }
+@media only screen and (max-width: 459px) {
+	.cardplus {
+		width: 100px;
+	}
+	.subscriptionpage--userheader > h3 {
+		margin-right: 142px;
+		font-size: 1rem;
+	}
+	.cardplus > img {
+		width: 15rem;
+		height: 9.1rem;
+	}
+	.subscriptionpage--userbottom > h3 {
+		margin-right: 159px;
+		font-size: 1rem;
+	}
+	.subuser--button {
+		width: 15rem;
+		height: 5rem;
+	}
+	.subuser--button__first {
+		font-size: 0.9rem;
+	}
+	.subuser--button__second {
+		font-size: 0.7rem;
+		letter-spacing: 1px;
+	}
+	.plus--sign {
+		padding: 5px;
+		font-size: 10px;
+		border-radius: 5px;
+		width: 20px;
+		font-size: 10px;
+		line-height: 10px;
+	}
+	.subuser--cancel {
+		width: 20px;
+		height: 20px;
+		font-size: 1rem;
+		line-height: 1rem;
+		border-radius: 5px;
+	}
 }

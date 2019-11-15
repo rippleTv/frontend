@@ -1,60 +1,59 @@
 import React, { Component } from 'react';
 import card from './../img/mastercard.png';
 
+import withState from '../context/withState';
 
-class UserSub
- extends Component {
-    state = {  }
-    render() { 
-        return ( 
-            <React.Fragment> 
-                
-                    <div className="subscriptionpage--userheader">
-                        <h3>Add / Remove Card</h3>
-                        
-                        <div className="cardplus">
-                            <img src={card} alt="" width ="327" height= "200"/>
-                            <div className="plus--sign">
-                                +
-                            </div>
-                        </div>
-                       
-                    </div>
+const formatAmount = x =>
+	(x / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 
-                    <div className="subscriptionpage--userbottom">
-                        <h3>Subscriptions</h3>
-                        
-                        <div class="subuser--section">
-                        	<div className="subuser--button">
-                        	    <span className="subuser--button__first">Basic</span> 
-                        	    <span className="subuser--button__second">$7.99 per month</span>
-                        	</div>
+class UserSub extends Component {
+	state = {};
+	render() {
+		const { plans, user } = this.props;
+		console.log(plans, user);
+		return (
+			<div className="user_subscriptionpage">
+				<div className="subscriptionpage--userheader">
+					<h3>Add / Remove Card</h3>
 
-                           <button className="subuser--cancel" onClick={this.props.handleModal}> x </button>
-                        </div>
+					<div className="cardplus">
+						<img src={card} alt="" width="327" height="200" />
+						<div className="plus--sign">+</div>
+					</div>
+				</div>
 
-                        <div class="subuser--section">
-                            <div className="subuser--button subuser--active">
-                                <span className="subuser--button__first">Standard</span> 
-                                <span className="subuser--button__second ">$9.99 per month</span>
-                            </div>
-                                <button className="subuser--cancel" onClick={this.props.handleModal}> x </button>            
-                        </div>
+				<div className="subscriptionpage--userbottom">
+					<h3>Subscriptions</h3>
 
-                        <div class="subuser--section">
-                            <div className="subuser--button">
-                                <span className="subuser--button__first">Premium</span> 
-                                <span className="subuser--button__second">$11.99 per month</span>
-                            </div>
-                                <button className="subuser--cancel" onClick={this.props.handleModal}> x </button>                                
-                        </div>
+					{plans.map(plan => {
+						let isActive = plan.plan_id === user.subscription.plan_id;
+						const className = isActive
+							? `subuser--active subuser--button`
+							: 'subuser--button';
+						return (
+							<div class="subuser--section ">
+								<div className={className}>
+									<span className="subuser--button__first">{plan.name}</span>
+									<span className="subuser--button__second">
+										{formatAmount(plan.amount)} per month
+									</span>
+								</div>
 
-                     
-                    </div>
-            </React.Fragment>
-         );
-    }
+								{isActive && (
+									<button
+										className="subuser--cancel"
+										onClick={this.props.handleModal}
+									>
+										x
+									</button>
+								)}
+							</div>
+						);
+					})}
+				</div>
+			</div>
+		);
+	}
 }
- 
-export default UserSub
-;
+
+export default withState(UserSub);

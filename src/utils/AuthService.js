@@ -116,6 +116,19 @@ class AuthService {
 			body: JSON.stringify(body)
 		});
 	}
+
+	// add movie to list
+	AddMovieToList(body) {
+		return this.fetch(`${API_URL}/movielist/addtoList`, {
+			method: 'POST',
+			body: JSON.stringify(body)
+		});
+	}
+
+	//check if movie exists
+	checkIfMovieIsInList(id) {
+		return this.fetch(`${API_URL}/movielist/${id}`);
+	}
 }
 
 export default new AuthService();

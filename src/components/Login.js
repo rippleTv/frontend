@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import * as ROUTES from '../routes';
-
 import ripple from '../img/Ripple-Logo.png';
 import { validate, validateLogin } from '../utils/validate';
 import AuthService from '../utils/AuthService';
-
 import { withState } from '../context';
 import { Link } from 'react-router-dom';
 

@@ -57,6 +57,7 @@ class NavBar extends Component {
 						</div>
 					</div>
 					<i className="fas fa-search"></i>
+					
 					<i className="fas fa-user-circle" onClick={this.handleDrop}></i>
 				</nav>
 				{this.state.displayDrop && (

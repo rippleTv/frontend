@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import ripple from '../img/Ripple-Logo.png';
 import resetimage from '../img/resetimage.png';
-
 import AuthService from '../utils/AuthService';
-
 import { validate } from '../utils/validate';
-
 import * as ROUTES from '../routes';
 
 const INTIAL_STATE = {

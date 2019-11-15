@@ -129,6 +129,11 @@ class AuthService {
 	checkIfMovieIsInList(id) {
 		return this.fetch(`${API_URL}/movielist/${id}`);
 	}
+
+	//get user list
+	getUserList() {
+		return this.fetch(`${API_URL}/movielist/all`);
+	}
 }
 
 export default new AuthService();

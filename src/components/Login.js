@@ -6,6 +6,7 @@ import { validate, validateLogin } from '../utils/validate';
 import AuthService from '../utils/AuthService';
 
 import { withState } from '../context';
+import { Link } from 'react-router-dom';
 
 const INTIAL_STATE = {
 	email: '',
@@ -131,6 +132,7 @@ class Login extends Component {
 							<span className="error-text">{errors.password}</span>
 						)}
 					</div>
+          <Link to={ROUTES.RESETPASSWORD}><p className="forgotPassLink">Forgot Password?</p></Link>
 					<div className="form_input">
 						<button class="logButton" disabled={invalid}>
 							{loading ? <span class="spinner"></span> : 'Log In'}

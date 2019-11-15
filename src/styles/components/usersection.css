@@ -1,11 +1,11 @@
 .user--nav, .user--nav__sm{
     background: #000000;
-    height: 8vh;
+    height: 9vh;
     padding: 10px 0px;
 }
 .userprofile--body{
    display: flex;
-   height: 92vh;
+   height: 91vh;
 }
 .userprofile--main{
     position: relative;

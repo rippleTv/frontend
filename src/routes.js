@@ -18,4 +18,5 @@ export const RESETSUCCESSFUL = '/resetsuccessful'
 export const ADMIN = '/admin';
 export const MOVIEPREVIEW = '/moviepreview';
 export const SERIESPREVIEW = '/seriespreview';
+export const CARO = '/caro';
 

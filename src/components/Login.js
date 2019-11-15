@@ -131,6 +131,8 @@ class Login extends Component {
               <span className="error-text">{errors.password}</span>
             )}
           </div>
+
+          <p>Forgot Password?</p>
           <div className="form_input">
             <button class="logButton" disabled={invalid}>
               {loading ? <span class="spinner"></span> : "Log In"}

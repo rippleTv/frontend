@@ -33,6 +33,7 @@ import MoviePreview from './components/MoviePreview';
 import SeriesPreview from './components/SeriesPreview';
 
 import { Consumer } from './context';
+import HomeCarousel from './common/carousel';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
 	<Route
@@ -87,7 +88,7 @@ function AppRouter() {
     <Router>
       <Switch>
         <Route exact path={ROUTES.LANDING} component={LandingPage} />
-
+		<Route path={ROUTES.CARO} component={HomeCarousel}></Route>
         <Route path={ROUTES.NAVPOP} component={NavPop}></Route>
         <Route path={ROUTES.VERIFY} component={VerifyScreen}></Route>
         <Route path={ROUTES.CONFIRM} component={ConfirmScreen}></Route>

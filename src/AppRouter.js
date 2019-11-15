@@ -31,9 +31,7 @@ import AuthService from './utils/AuthService';
 import Admin from './components/Admin';
 import MoviePreview from './components/MoviePreview';
 import SeriesPreview from './components/SeriesPreview';
-
 import { Consumer } from './context';
-import HomeCarousel from './common/carousel';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
 	<Route
